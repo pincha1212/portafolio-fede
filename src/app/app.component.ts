@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { HomeComponent } from "./components/home/home.component";
+import { SeccionesComponent } from "./components/secciones/secciones.component";
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [HomeComponent, SeccionesComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
