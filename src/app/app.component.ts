@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { SeccionesComponent } from './components/secciones/secciones.component';
 import { RouterModule } from '@angular/router';
-import { HomeComponent } from "./components/home/home.component";
+import { routes } from './app.routes';
 
 @Component({
   selector: 'app-root',
-  imports: [SeccionesComponent, RouterModule, HomeComponent],
+  imports: [SeccionesComponent, RouterModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

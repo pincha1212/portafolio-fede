@@ -7,13 +7,11 @@ import { SobremiComponent } from './components/secciones/sobremi/sobremi.compone
 import { ProyectoComponent } from './components/secciones/proyecto/proyecto.component';
 
 export const routes: Routes = [
-    {
-        path: 'home', component: HomeComponent, children: [ 
-          { path: 'sobremi', component: SobremiComponent },
-          { path: 'proyecto', component: ProyectoComponent },
-          { path: 'formacion', component: FormacionComponent },
-          { path: 'experiencia', component: ExperienciaComponent },
-          { path: 'contacto', component: ContactoComponent }
-        ]
-      }
+  { path: '', redirectTo: '/home', pathMatch: 'full' }, 
+  { path: 'home', component: HomeComponent }, 
+  { path: 'sobremi', component: SobremiComponent },
+  { path: 'proyecto', component: ProyectoComponent },
+  { path: 'formacion', component: FormacionComponent },
+  { path: 'experiencia', component: ExperienciaComponent },
+  { path: 'contacto', component: ContactoComponent },
 ];
