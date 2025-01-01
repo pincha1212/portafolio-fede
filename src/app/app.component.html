@@ -1,10 +1,17 @@
-<header>
-  <h1>Bienvenido a mi Portafolio</h1>
-  <app-secciones></app-secciones>
+<header aria-label="Navegación principal">
+  <nav>
+    <app-secciones></app-secciones>
+  </nav>
 </header>
-<main>
-<router-outlet></router-outlet>
+<main role="main">
+  <router-outlet aria-live="polite"></router-outlet>
 </main>
-<footer>
-  <p>&copy; 2025 Portafolio Fede. Todos los derechos reservados.</p>
+
+
+<footer aria-label="Pie de página del portafolio de Fede" class="footer-container">
+  <div class="footer-content">
+    <p>&copy; 2025 Portafolio Fede. Todos los derechos reservados.</p>
+    <p>Desarrollado por FEDERICO RICARDO BARZOLA</p>
+  </div>
 </footer>
+

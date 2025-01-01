@@ -1,0 +1,144 @@
+/* Estilos para la sección de experiencia */
+#experience {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background: linear-gradient(135deg, #f3e6ff, #e3f6ff); /* Fondo adaptado */
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Título principal de la sección */
+#experience .section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    color: #5a189a;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: all 0.3s ease-in-out; /* Transición suave */
+}
+
+#experience .section-title:hover {
+    color: #3c096c;
+    transform: translateY(-5px);
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Descripción de la sección */
+#experience .section-description {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Títulos de las subsecciones */
+#experience .subsection-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    color: #5a189a;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+#experience .subsection-title:hover {
+    color: #3c096c;
+    transform: translateY(-3px);
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para los elementos de experiencia */
+.experience-item {
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.experience-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos de las experiencias */
+.experience-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Duración de las experiencias */
+.experience-duration {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+/* Estilos para las listas dentro de cada experiencia */
+.experience-item ul {
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.experience-item ul li {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Resumen de la sección */
+.experience-summary {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Animación de desvanecimiento */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    #experience {
+        padding: 20px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-description {
+        font-size: 1rem;
+    }
+
+    .subsection-title {
+        font-size: 1.5rem;
+    }
+
+    .experience-title {
+        font-size: 1.1rem;
+    }
+
+    .experience-duration {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,131 @@
+/* Estilo para la sección de "Mi Camino de Aprendizaje" */
+.learning-path {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #f3e6ff, #e3f6ff);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Título principal de la sección */
+.section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    color: #5a189a;
+    margin-bottom: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.section-title:hover {
+    color: #3c096c;
+    transform: translateY(-5px);
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Descripción de la sección */
+.section-description {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Títulos de las subsecciones */
+.subsection-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    color: #5a189a;
+    margin: 20px 0 10px;
+    position: relative;
+    text-align: center;
+}
+
+.subsection-title::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #5a189a;
+    margin: 10px auto 0;
+    animation: slideIn 0.8s ease-in-out;
+}
+
+/* Listas de elementos (certificaciones, cursos, etc.) */
+ul {
+    list-style: none;
+    padding: 0;
+    animation: fadeIn 1s ease-in-out 0.3s;
+}
+
+li {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #6a0572;
+    padding: 15px 0;
+    position: relative;
+    animation: slideUp 1s ease-in-out 0.5s;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+li::before {
+    content: "✔";
+    color: #5a189a;
+    margin-right: 10px;
+}
+
+li:hover {
+    transform: translateX(5px);
+    color: #5a189a;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Optimización para dispositivos móviles */
+@media (max-width: 768px) {
+    .learning-path {
+        padding: 20px;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+    .subsection-title {
+        font-size: 1.5rem;
+    }
+    .section-description {
+        font-size: 0.9rem;
+    }
+}

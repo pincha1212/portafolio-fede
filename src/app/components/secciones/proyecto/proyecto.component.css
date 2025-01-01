@@ -1,3 +1,92 @@
+/* Sección del proyecto */
 .proyecto-intro {
-    font-size: 1.2em;
-}
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px;
+    background: linear-gradient(135deg, #f3e6ff, #e3f6ff);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .proyecto-intro header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .proyecto-intro .animate-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    color: #5a189a;
+    margin-bottom: 20px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .proyecto-intro .animate-text:hover {
+    color: #3c096c;
+    transform: translateY(-5px);
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Estilo de los proyectos */
+  .proyecto {
+    background: #fff;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .proyecto-titulo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    color: #5a189a;
+    margin-bottom: 15px;
+  }
+  
+  .proyecto-fecha {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .proyecto-detalles {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .proyecto-detalles li {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #6a0572;
+    padding: 10px 0;
+    position: relative;
+  }
+  
+  .proyecto-detalles li::before {
+    content: "✔";
+    color: #5a189a;
+    margin-right: 10px;
+  }
+  
+  /* Animación */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Optimización para dispositivos móviles */
+  @media (max-width: 768px) {
+    .proyecto-intro {
+      padding: 20px;
+    }
+    .proyecto-titulo {
+      font-size: 1.5rem;
+    }
+  }
+  

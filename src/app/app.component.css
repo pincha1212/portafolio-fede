@@ -1,36 +1,62 @@
-header {
-    background-color: #333;
-    color: white;
-    padding: 20px;
+/* Estilo del pie de página */
+.footer-container {
+    background: #5a189a; /* Color de fondo acorde con el estilo */
+    color: #fff; /* Color blanco para el texto */
+    padding: 20px 0;
     text-align: center;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
-}
-
-
-
-main {
-    padding: 20px;
-}
-
-section {
-    margin-bottom: 40px;
-}
-
-section h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
+    margin-top: 40px;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidad */
+  }
+  
+  .footer-content {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .footer-container p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    margin: 5px 0;
+    color: #fff;
+  }
+  
+  .footer-container p:first-child {
+    font-weight: bold; /* Resaltar el copyright */
+  }
+  
+  .footer-container p:last-child {
+    font-style: italic; /* Estilo en cursiva para el texto de desarrollador */
+    margin-top: 10px;
+  }
+  
+  /* Efecto hover en el pie de página */
+  .footer-container p:hover {
+    color: #e3f6ff;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  /* Animación suave en la entrada del pie de página */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .footer-container {
+    animation: fadeIn 1s ease-out;
+  }
+  
+  /* Optimización para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .footer-container {
+      padding: 15px 0;
+    }
+  
+    .footer-container p {
+      font-size: 0.9rem;
+    }
+  }
+  

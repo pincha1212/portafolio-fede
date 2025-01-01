@@ -1,0 +1,181 @@
+/* Contenedor de contacto */
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #f3e6ff, #e3f6ff); /* Gradiente suave */
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    animation: fadeIn 1s ease-in-out; /* Animación de entrada */
+}
+
+/* Título principal de la sección de contacto */
+.contact-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    color: #5a189a; /* Color morado */
+    margin-bottom: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-title:hover {
+    color: #3c096c;
+    transform: translateY(-5px);
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra al hacer hover */
+}
+
+/* Subtítulo */
+.contact-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    color: #3c096c; /* Color oscuro */
+    margin: 20px 0 10px;
+    animation: slideUp 1s ease-in-out 0.3s;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra de texto suave */
+}
+
+/* Sección de Redes Sociales */
+.contact-socials h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    color: #5a189a; /* Color morado */
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.contact-socials h3::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #5a189a; /* Subrayado animado */
+    margin: 10px auto 0;
+    animation: slideIn 0.8s ease-in-out;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    animation: fadeIn 1s ease-in-out 0.3s;
+}
+
+.social-links li {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    color: #6a0572;
+    padding: 10px 0;
+    position: relative;
+    animation: slideUp 1s ease-in-out 0.5s;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links li::before {
+    content: "✔";
+    color: #5a189a; /* Íconos de redes sociales */
+    margin-right: 10px;
+}
+
+.social-links a {
+    color: #ff7e5f; /* Color cálido para los enlaces */
+    text-decoration: none;
+    transition: color 0.3s ease-out;
+}
+
+.social-links a:hover {
+    color: #ffb7a6; /* Efecto hover para enlaces */
+}
+
+/* Correo Electrónico */
+.contact-email p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
+    color: #333; /* Gris oscuro */
+    margin-bottom: 1.5rem; /* Espaciado inferior */
+}
+
+.contact-email a {
+    color: #ff7e5f;
+    text-decoration: none;
+    transition: color 0.3s ease-out;
+}
+
+.contact-email a:hover {
+    color: #ffb7a6; /* Hover para el correo */
+}
+
+/* Disponibilidad */
+.contact-availability p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+/* Mensaje Final */
+.contact-footer {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.contact-footer:hover {
+    color: #ff7e5f; /* Hover en el mensaje final */
+    text-decoration: underline;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Optimización para dispositivos móviles */
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 20px;
+    }
+    .contact-title {
+        font-size: 2rem;
+    }
+    .contact-subtitle {
+        font-size: 1.3rem;
+    }
+    .social-links li {
+        font-size: 1rem;
+    }
+    .contact-email p {
+        font-size: 1rem;
+    }
+    .contact-footer {
+        font-size: 1.25rem;
+    }
+}

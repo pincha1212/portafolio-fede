@@ -1,109 +1,50 @@
- /* Estilos generales */
-.home-container {
-    text-align: center;
-    padding: 20px;
-    background-color: #f8f8f8;
-    border-bottom: 2px solid #ddd;
-    min-height: 80px; /* Altura mínima */
-    font-family: 'Roboto', sans-serif;
+/* Contenedor sobre mí */
+.sobremi {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #f3e6ff, #e3f6ff); /* Fondo suave */
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
 }
 
-/* Estilo del título */
+/* Títulos dentro del contenedor */
 .home-title {
+    font-family: 'Poppins', sans-serif;
     font-size: 2.5rem;
-    color: #222; /* Mejor contraste */
-    margin: 0;
-    line-height: 1.2;
-    transition: font-size 0.3s ease;
+    text-align: center;
+    color: #5a189a;
+    margin-bottom: 20px;
+    transition: all 0.3s ease-in-out;
 }
 
-/* Texto animado (eliminado para evitar animaciones) */
-/* .animate-text {
+/* Subtítulo */
+.home-subtitle {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Botón */
+.cta-button {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Asegura el centrado vertical, aunque no es necesario aquí */
+    margin-top: 20px; /* Espacio adicional si es necesario */
+    background-color: #5a189a;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
     display: inline-block;
-    position: relative;
-    font-weight: bold;
-    font-size: 24px;
-    animation: fadeInOut 4s infinite;
-    margin: 0 15px; /* Separar las palabras con margen */
-/*} */
-
-/* Animación de entrada (eliminada para texto) */
-/* @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-} */
-
-/* Animación de desvanecimiento (eliminada para texto) */
-/* @keyframes fadeInOut {
-    0%, 100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    50% {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-} */
-
-/* Nueva animación para los iconos: rotación, escala y rebote */
-@keyframes iconBounce {
-    0% {
-        opacity: 0;
-        transform: rotate(0deg) scale(0.8); /* Empezamos pequeños y sin visibilidad */
-    }
-    30% {
-        opacity: 1;
-        transform: rotate(15deg) scale(1.1); /* Primera rotación y aumento de tamaño */
-    }
-    50% {
-        opacity: 1;
-        transform: rotate(-10deg) scale(1.05); /* Rebote en sentido contrario */
-    }
-    70% {
-        opacity: 1;
-        transform: rotate(5deg) scale(1.1); /* Rebote suave */
-    }
-    100% {
-        opacity: 1;
-        transform: rotate(0deg) scale(1); /* Vuelve al tamaño original */
-    }
+    transition: background-color 0.3s ease;
 }
 
-/* Cuchara: Animación nueva con rebote */
-#de-la-cocina + i { /* Cuchara */
-    animation: iconBounce 4s ease-in-out infinite; /* Animación de rebote y rotación */
-    opacity: 1;
-    margin-left: 10px; /* Separar un poco el icono de la palabra */
-}
-
-/* Teclado: Animación nueva con rebote */
-#al-codigo + i { /* Teclado */
-    animation: iconBounce 4s ease-in-out infinite; /* Animación de rebote y rotación */
-    opacity: 1;
-    margin-left: 10px; /* Separar un poco el icono de la palabra */
-}
-
-/* Responsividad */
-@media (max-width: 768px) {
-    .home-container {
-        padding: 15px;
-    }
-
-    .home-title {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .home-container {
-        padding: 10px;
-    }
-
-    .home-title {
-        font-size: 1.8rem;
-    }
+.cta-button:hover {
+    background-color: #3c096c;
 }
