@@ -44,41 +44,72 @@
 
 /* Descripciones */
 .descripcion {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #333;
-    animation: slideUp 1s ease-in-out;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra de texto suave */
+    font-family: 'Poppins', sans-serif; /* Tipografía moderna y limpia */
+    font-size: 1.2rem; /* Tamaño cómodo para lectura */
+    line-height: 1.8; /* Mejora la legibilidad */
+    color: transparent; /* Texto transparente para aplicar gradiente */
+    background: linear-gradient(120deg, #ff7eb3, #ff758c, #ff5179);
+    background-clip: text; /* Gradiente aplicado solo al texto */
+    -webkit-background-clip: text;
+    animation: textGradient 5s ease-in-out infinite alternate; /* Animación suave */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); /* Sombra sutil */
+    margin: 1.5rem 0;
+    padding: 1rem 1.5rem;
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo translúcido */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde estilizado */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto interactivo */
+  }
+  
+  .descripcion:hover {
+    transform: translateY(-5px); /* Elevación al pasar el cursor */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
+  }
+  
+  @keyframes textGradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  .habilidades-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 20px 0;
 }
-.descripcion::before {
-    content: "➤";
-    color: #5a189a;
-    margin-right: 10px;
-}
-.descripcion:hover {
-    transform: translateY(-2px); /* Movimiento más sutil */
-    font-family: 'Poppins', sans-serif; /* Cambia la fuente */
-    font-size: 1rem; /* Cambia el tamaño de la fuente */
-    text-transform: uppercase; /* Convierte el texto a mayúsculas */
-}
+
 
 /* Lista de habilidades */
 .habilidades {
-    list-style: none;
-    padding: 0;
-    animation: fadeIn 1s ease-in-out 0.3s;
+    display: flex;
+    justify-content: space-around;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin: 20px 0;
+    gap: 20px;
 }
 
-.habilidades li {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    color: #6a0572;
-    padding: 15px 0;
-    position: relative;
-    animation: slideUp 1s ease-in-out 0.5s;
-    transition: transform 0.3s ease, color 0.3s ease;
+.habilidades-columna {
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo translúcido */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde estilizado */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto interactivo */
+    padding: 15px;
+    margin: 1%;
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
 }
+.habilidades-columna:hover {
+    transform: translateY(-5px); /* Elevación al pasar el cursor */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
+}
+
 
 .habilidades li::before {
     content: "✔";
@@ -86,10 +117,48 @@
     margin-right: 10px;
 }
 
-.habilidades li:hover {
-    transform: translateX(5px); /* Movimiento más sutil */
-    color: #5a189a;
-    transition: transform 0.3s ease, color 0.3s ease; /* Agregar transición de color */
+
+
+.habilidades-columna h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #6a0572;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.habilidades-columna p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #841ee9;
+
+
+    margin: 10px 0;
+
+}
+.habilidades-columna p:hover {
+    color: #6a0572;
+    transform: translateX(5px);
+}
+.habilidades-columna p::before {
+    content: "👉";
+    margin-right: 5px;
+    position: absolute;
+    left: -20px;
+    transition: transform 0.3s ease, opacity 0.6s ease; /* Controlamos el tiempo del desvanecimiento */
+}
+
+.habilidades-columna p:hover::before {
+    transform: translateX(-10px);
+    opacity: 1; /* Aparece suavemente al hacer hover */
+
+}
+
+.habilidades-columna p:not(:hover)::before {
+    transform: translateX(0px);
+    opacity: 0; /* Desvanece suavemente cuando el mouse se va */
 }
 
 /* Animaciones */

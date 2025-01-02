@@ -1,9 +1,9 @@
 /* Estilos para el botón PRUEBAS */
 .btn-pruebas {
-  background-color: #28a745; /* Fondo verde */
+  background-color: #5a189a;
   color: white; /* Texto blanco */
-  padding: 12px 24px; /* Espaciado interno */
-  border-radius: 8px; /* Bordes redondeados */
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
   border: none; /* Sin bordes visibles */
   font-size: 1.1rem;
   font-weight: 600;
@@ -13,7 +13,7 @@
 }
 
 .btn-pruebas:hover {
-  background-color: #218838; /* Fondo más oscuro en hover */
+  background-color: #3c096c;
   transform: scale(1.05); /* Efecto de escalado */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
 }
@@ -21,7 +21,7 @@
 .btn-pruebas:focus {
   outline: none; /* Elimina el contorno predeterminado */
   background-color: transparent; /* Fondo transparente cuando está enfocado */
-  color: #28a745; /* El texto se pone verde */
+  color: #5a189a; /* El texto se pone verde */
 }
 
 /* Efecto de clic: subrayado */
@@ -32,14 +32,14 @@
   left: 0; /* Desde el borde izquierdo */
   height: 3px; /* Altura del subrayado */
   width: 100%; /* Cubrirá todo el ancho del botón */
-  background-color: #28a745; /* Color del subrayado */
+  background-color: #5a189a;
   transition: transform 0.3s ease; /* Suaviza la animación */
   transform: scaleX(1); /* Expande el subrayado horizontalmente */
 }
 
 /* Estado persistente del subrayado (después de hacer clic) */
 .btn-pruebas:focus::after {
-  background-color: #28a745; /* El subrayado permanece verde */
+  background-color: #5a189a;
   transform: scaleX(1); /* El subrayado se expande */
 }
 
