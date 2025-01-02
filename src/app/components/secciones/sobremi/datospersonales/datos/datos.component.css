@@ -1,0 +1,84 @@
+div {
+    position: absolute;
+    top: 80%;
+    left: 37%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 300px;
+    opacity: 0;
+    animation: fadeIn 0.3s ease-in-out forwards;
+  }
+  
+  /* Animación para hacer que el div aparezca */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .datos-lista {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* Dos columnas de igual tamaño */
+    gap: 50px 100%;  /* Espacio entre las columnas */
+    list-style-type: none;  /* Elimina los puntos de la lista */
+    padding: 0;  /* Elimina el padding predeterminado de la lista */
+}
+  
+
+/* Estilo de cada elemento de la lista */
+.datos-lista li {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    animation: slideUp 1s ease-in-out;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra de texto suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease; /* Transición más lenta */
+
+  }
+
+  .datos-lista li:hover {
+    transform: translateY(-2px); /* Movimiento más sutil */
+    color: #5a189a; /* Cambia el color del texto */
+    font-family: 'Poppins', sans-serif; /* Cambia la fuente */
+    font-size: 1rem; /* Cambia el tamaño de la fuente */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    background: linear-gradient(90deg, #5a189a, #ff6b6b); /* Fondo degradado */
+    -webkit-background-clip: text; /* Muestra el fondo solo en el texto */
+    background-clip: text; /* Propiedad estándar para compatibilidad */
+    -webkit-text-fill-color: transparent; /* Hace que el texto tenga solo el relleno del fondo */
+    font-weight: bold; /* Negrita para resaltar */  }
+
+  .columna {
+    flex: 1; /* Hace que las columnas ocupen el mismo espacio */
+    min-width: 200px; /* Asegura que las columnas tengan un mínimo de ancho */
+  }
+  
+  .datos-lista .columna:nth-child(2), 
+.datos-lista .columna:nth-child(3) {
+  flex: 2; /* Hace que algunas columnas ocupen más espacio que otras */
+}
+
+.c1{
+    margin-left: 23%; /* Sin margen izquierdo */
+}
+.c2{
+    margin-right: 30%; /* Sin margen derecho */
+}
+.c3{
+    margin-left: -10%; /* Sin margen izquierdo */
+}
+
+.c4{
+    margin-left: -22%; /* Empuja el elemento hacia la derecha */
+}
+
+.c5{
+    margin-left: 20%; /* Sin margen izquierdo */
+}
+.c6{
+    margin-right: 30%; /* Sin margen derecho */
+}

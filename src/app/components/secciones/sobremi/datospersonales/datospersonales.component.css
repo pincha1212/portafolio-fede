@@ -1,0 +1,66 @@
+/* Estilos para el botón PRUEBAS */
+.btn-pruebas {
+  background-color: #28a745; /* Fondo verde */
+  color: white; /* Texto blanco */
+  padding: 12px 24px; /* Espaciado interno */
+  border-radius: 8px; /* Bordes redondeados */
+  border: none; /* Sin bordes visibles */
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative; /* Necesario para posicionar el pseudo-elemento */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+}
+
+.btn-pruebas:hover {
+  background-color: #218838; /* Fondo más oscuro en hover */
+  transform: scale(1.05); /* Efecto de escalado */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+.btn-pruebas:focus {
+  outline: none; /* Elimina el contorno predeterminado */
+  background-color: transparent; /* Fondo transparente cuando está enfocado */
+  color: #28a745; /* El texto se pone verde */
+}
+
+/* Efecto de clic: subrayado */
+.btn-pruebas:active::after {
+  content: ""; /* Crea el pseudo-elemento */
+  position: absolute; /* Posiciona respecto al botón */
+  bottom: 0; /* En la parte inferior del botón */
+  left: 0; /* Desde el borde izquierdo */
+  height: 3px; /* Altura del subrayado */
+  width: 100%; /* Cubrirá todo el ancho del botón */
+  background-color: #28a745; /* Color del subrayado */
+  transition: transform 0.3s ease; /* Suaviza la animación */
+  transform: scaleX(1); /* Expande el subrayado horizontalmente */
+}
+
+/* Estado persistente del subrayado (después de hacer clic) */
+.btn-pruebas:focus::after {
+  background-color: #28a745; /* El subrayado permanece verde */
+  transform: scaleX(1); /* El subrayado se expande */
+}
+
+/* Inicialmente el subrayado está contraído */
+.btn-pruebas::after {
+  content: ""; /* Crea el pseudo-elemento */
+  position: absolute; /* Posiciona respecto al botón */
+  bottom: 0; /* En la parte inferior del botón */
+  left: 0; /* Desde el borde izquierdo */
+  height: 3px; /* Altura del subrayado */
+  width: 100%; /* Cubrirá todo el ancho del botón */
+  background-color: transparent; /* Sin color inicialmente */
+  transform: scaleX(0); /* Subrayado contraído */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Animaciones suaves */
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;  /* Centra el botón horizontalmente */
+  align-items: center;      /* Centra el botón verticalmente */
+}
+
+
+

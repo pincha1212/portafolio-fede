@@ -9,21 +9,8 @@
     animation: fadeIn 1s ease-in-out;
 }
 
-/* Título principal */
-.titulo-principal {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2.5rem;
-    text-align: center;
-    color: #5a189a;
-    margin-bottom: 20px;
-    transition: all 0.3s ease-in-out; /* Transición suave */
-}
 
-.titulo-principal:hover {
-    color: #3c096c;
-    transform: translateY(-5px);
-    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
+
 
 /* Títulos secundarios */
 .titulo {
@@ -63,6 +50,17 @@
     color: #333;
     animation: slideUp 1s ease-in-out;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra de texto suave */
+}
+.descripcion::before {
+    content: "➤";
+    color: #5a189a;
+    margin-right: 10px;
+}
+.descripcion:hover {
+    transform: translateY(-2px); /* Movimiento más sutil */
+    font-family: 'Poppins', sans-serif; /* Cambia la fuente */
+    font-size: 1rem; /* Cambia el tamaño de la fuente */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
 }
 
 /* Lista de habilidades */
@@ -142,114 +140,18 @@
         font-size: 0.9rem;
     }
 }
-
-
-/* Contenedor de la imagen como disco de vinilo */
-.profile-vinyl {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 220px; /* Tamaño del disco */
-    height: 220px;
-    margin: 0 auto;
-    border-radius: 50%; /* Forma circular */
-    background: radial-gradient(circle, #222 40%, #444 60%, #666 80%, #222 100%);
-
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra sutil */
-    position: relative;
-    animation: spinVinyl 8s linear infinite, fadeInUp 1s ease-out; /* Animación giratoria y de entrada */
-    border: 8px solid #f1f1f1; /* Borde sutil alrededor del disco */
-}
-
-/* Animación de entrada: Fade In y movimiento hacia arriba */
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px); /* Desplaza hacia abajo */
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0); /* Vuelve a su posición original */
-    }
-}
-
-/* Imagen central (etiqueta del disco) */
-.profile-vinyl img {
-    width: 120px; /* Tamaño del centro del disco */
-    height: 120px;
-    border-radius: 50%; /* Circular */
-    object-fit: cover;
-    border: 2px solid white; /* Borde alrededor del centro */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Sombra para resaltar */
-}
-
-/* Efecto interactivo en hover */
-.profile-vinyl:hover {
-    animation-play-state: paused; /* Pausa el giro al pasar el mouse */
-}
-
-.profile-vinyl:hover img {
-    transform: scale(1.1); /* Zoom sutil en la etiqueta central */
-    transition: transform 0.3s ease;
-}
-
-/* Animación de rotación */
-@keyframes spinVinyl {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-/* Animación de entrada para el brazo fonocaptor */
-@keyframes armFadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px) rotate(30deg); /* Desplaza hacia abajo y rota */
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0) rotate(45deg); /* Vuelve a su posición original y ángulo */
-    }
-}
-
-/* Brazo fonocaptor (rectángulo estático) */
-.phono-arm {
-    width: 100px; /* Largo del brazo */
-    height: 6px; /* Grosor del brazo */
-    background-color: #666; /* Color del brazo */
-    position: absolute;
-    top: 50%; /* Ajusta verticalmente para que quede alineado con el disco */
-    left: 50%; /* Posición horizontal relativa al disco */
-    transform: rotate(45deg); /* Ángulo estático del brazo */
-    transform-origin: left; /* Punto de anclaje del brazo */
-    animation: armFadeInUp 1s ease-out; /* Animación de entrada */
-}
-
-/* Cabezal del fonocaptor (donde se encuentra la aguja) */
-.phono-arm::after {
-    content: '';
-    width: 10px; /* Tamaño del cabezal */
-    height: 20px; /* Altura del cabezal */
-    background-color: #333; /* Color del cabezal */
-    border-radius: 5px; /* Bordes redondeados */
-    position: absolute;
-    top: -5px; /* Posición para que esté justo en el extremo del brazo */
-    left: 90%; /* Coloca el cabezal en el borde del brazo */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra para darle realismo */
-}
-
-/* Aguja del fonocaptor */
-.phono-arm::before {
-    content: '';
-    width: 2px; /* Grosor de la aguja */
-    height: 10px; /* Largo de la aguja */
-    background-color: #ccc; /* Color de la aguja */
-    position: absolute;
-    top: 15px; /* Posición vertical para que quede debajo del cabezal */
-    left: 50%; /* Centrado horizontalmente en el cabezal */
-    transform: translateX(-50%); /* Ajuste de centrado */
-    border-radius: 1px; /* Bordes suaves para un toque realista */
-}
+.containerdatos {
+    display: flex;               /* Activa Flexbox */
+    flex-direction: column;      /* Apila los elementos de arriba a abajo (vertical) */
+    justify-content: flex-start; /* Alinea los elementos al principio en el eje vertical */
+    align-items: center;         /* Opcional: Alinea los elementos al centro en el eje horizontal */
+    gap: 20px;                   /* Opcional: Espacio entre los elementos */
+  }
+  
+  app-vinilo-perfil,
+  app-datospersonales {
+    width: 100%;                /* Opcional: Hace que los componentes ocupen todo el ancho disponible */
+    max-width: 600px;           /* Opcional: Limita el ancho máximo de los componentes */
+    padding: 10px;              /* Opcional: Agrega un poco de espacio dentro de cada componente */
+  }
+  

@@ -1,0 +1,162 @@
+
+.vinyl-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%; /* Asegura que sea adaptable */
+    max-width: 220px; /* Tamaño máximo del disco */
+    margin: 0 auto;
+}
+
+/* Contenedor de la imagen como disco de vinilo */
+.profile-vinyl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px; /* Tamaño del disco */
+    height: 220px;
+    margin: 0 auto;
+    border-radius: 50%; /* Forma circular */
+    background: radial-gradient(circle, #222 40%, #444 60%, #666 80%, #222 100%);
+    box-shadow: 0 4px 10px rgb(90, 24, 154); /* Sombra sutil */
+    position: relative;
+    animation: spinVinyl 8s linear infinite, fadeInUp 1s ease-out; /* Animación giratoria y de entrada */
+    border: 8px solid #f1f1f1; /* Borde sutil alrededor del disco */
+    transition: box-shadow 1s ease; /* Transición suave en hover */
+}
+
+/* Animación de entrada: Fade In y movimiento hacia arriba */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Desplaza hacia abajo */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Vuelve a su posición original */
+    }
+}
+
+/* Imagen central (etiqueta del disco) */
+.profile-vinyl img {
+    width: 80px; /* Tamaño del centro del disco */
+    height: 80px;
+    border-radius: 50%; /* Circular */
+    object-fit: cover;
+    border: 4px solid white; /* Borde alrededor del centro */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Sombra para resaltar */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añadimos transiciones */
+}
+
+/* Efecto interactivo en hover */
+.profile-vinyl:hover {
+    animation-play-state: paused; /* Pausa el giro al pasar el mouse */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25); /* Sombra más grande en hover */
+}
+
+.profile-vinyl:hover img {
+    transform: scale(1.1) rotate(5deg); /* Añadir un pequeño giro para el efecto de enfoque */
+}
+
+/* Animación de rotación */
+@keyframes spinVinyl {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Animación de entrada para el brazo fonocaptor */
+@keyframes armFadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) rotate(30deg); /* Desplaza hacia abajo y rota */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) rotate(45deg); /* Vuelve a su posición original y ángulo */
+    }
+}
+
+/* Contenedor del brazo fonocaptor */
+.phono-arm-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%; /* Coincide con el tamaño del disco */
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+
+}
+
+/* Brazo fonocaptor (rectángulo estático) */
+.phono-arm {
+    width: 170px; /* Largo del brazo */
+    height: 6px; /* Grosor del brazo */
+    background-color: #666; /* Color del brazo */
+    position: absolute;
+    top: 50%; /* Ajusta verticalmente para que quede alineado con el disco */
+    left: 50%; /* Posición horizontal relativa al disco */
+    transform: rotate(45deg); /* Ángulo estático del brazo */
+    transform-origin: left; /* Punto de anclaje del brazo */
+    animation: armFadeInUp 1s ease-out; /* Animación de entrada */
+    transition: transform 0.3s ease; /* Transición suave */
+}
+
+/* Cabezal del fonocaptor (donde se encuentra la aguja) */
+.phono-arm::after {
+    content: '';
+    width: 10px; /* Tamaño del cabezal */
+    height: 20px; /* Altura del cabezal */
+    background-color: #333; /* Color del cabezal */
+    border-radius: 5px; /* Bordes redondeados */
+    position: absolute;
+    top: -5px; /* Posición para que esté justo en el extremo del brazo */
+    left: 100%; /* Coloca el cabezal en el borde del brazo */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra para darle realismo */
+}
+
+/* Aguja del fonocaptor */
+.phono-arm::before {
+    content: '';
+    width: 2px; /* Grosor de la aguja */
+    height: 10px; /* Largo de la aguja */
+    background-color: #ccc; /* Color de la aguja */
+    position: absolute;
+    top: 15px; /* Posición vertical para que quede debajo del cabezal */
+    left: 50%; /* Centrado horizontalmente en el cabezal */
+    transform: translateX(-50%); /* Ajuste de centrado */
+    border-radius: 1px; /* Bordes suaves para un toque realista */
+}
+
+.phono-arm:hover {
+    background-color: #555; /* Cambiar color al pasar el mouse */
+    transform: rotate(50deg); /* Gira ligeramente para un efecto dinámico */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.phono-arm::before {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra más suave */
+}
+
+
+/* Para tabletas y pantallas medianas */
+@media (max-width: 768px) {
+    .vinyl-container {
+        max-width: 180px;
+    }
+}
+
+/* Para móviles y pantallas pequeñas */
+@media (max-width: 480px) {
+    .vinyl-container {
+        max-width: 140px;
+    }
+}
