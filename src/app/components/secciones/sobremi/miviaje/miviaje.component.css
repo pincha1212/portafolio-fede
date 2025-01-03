@@ -1,0 +1,42 @@
+/* Subtítulos */
+.subtitulo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    color: #3c096c;
+    margin: 20px 0 10px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra de texto suave */
+}
+
+/* Descripciones */
+.descripcion {
+    font-family: 'Poppins', sans-serif; /* Tipografía moderna y limpia */
+    font-size: 1.2rem; /* Tamaño cómodo para lectura */
+    line-height: 1.8; /* Mejora la legibilidad */
+    color: transparent; /* Texto transparente para aplicar gradiente */
+    background: linear-gradient(120deg, #ff7eb3, #ff758c, #ff5179);
+    background-clip: text; /* Gradiente aplicado solo al texto */
+    -webkit-background-clip: text;
+    animation: textGradient 5s ease-in-out infinite alternate; /* Animación suave */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); /* Sombra sutil */
+    margin: 1.5rem 0;
+    padding: 1rem 1.5rem;
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo translúcido */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde estilizado */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto interactivo */
+  }
+  
+  .descripcion:hover {
+    transform: translateY(-5px); /* Elevación al pasar el cursor */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
+  }
+  
+  @keyframes textGradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }

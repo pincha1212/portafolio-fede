@@ -9,15 +9,6 @@
     animation: fadeIn 1s ease-in-out;
 }
 
-/* Subtítulos */
-.subtitulo {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.5rem;
-    color: #3c096c;
-    margin: 20px 0 10px;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra de texto suave */
-}
-
 /* Descripciones */
 .descripcion {
     font-family: 'Poppins', sans-serif; /* Tipografía moderna y limpia */
@@ -86,13 +77,6 @@
 @media (max-width: 768px) {
     .sobremi {
         padding: 20px;
-    }
-
-    .subtitulo {
-        font-size: 0.8rem;
-    }
-    .descripcion {
-        font-size: 0.9rem;
     }
 }
 .containerdatos {
