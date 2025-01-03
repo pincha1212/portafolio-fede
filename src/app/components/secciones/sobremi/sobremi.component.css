@@ -87,14 +87,9 @@
     .sobremi {
         padding: 20px;
     }
-    .titulo-principal {
-        font-size: 2rem;
-    }
-    .titulo {
-        font-size: 1.5rem;
-    }
+
     .subtitulo {
-        font-size: 1.3rem;
+        font-size: 0.8rem;
     }
     .descripcion {
         font-size: 0.9rem;
