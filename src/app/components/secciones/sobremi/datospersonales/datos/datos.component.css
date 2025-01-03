@@ -30,8 +30,8 @@ div {
 
 /* Estilo de cada elemento de la lista */
 .datos-lista li {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
+  font-family: 'Poppins', sans-serif; /* Cambia la fuente */
+  font-size: 1rem;
     line-height: 1.6;
     color: #333;
     animation: slideUp 1s ease-in-out;

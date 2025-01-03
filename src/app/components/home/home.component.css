@@ -9,15 +9,39 @@
     animation: fadeIn 1s ease-in-out;
 }
 
-/* Títulos dentro del contenedor */
+
 .home-title {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2.5rem;
-    text-align: center;
+    font-family: 'Poppins', sans-serif; /* Tipografía moderna y limpia */
+    font-size: 1.8rem;
     color: #5a189a;
-    margin-bottom: 20px;
-    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #333; /* Simula el cursor de escritura */
+    width: 0;
+    animation: escribir 6s steps(60) 1s forwards, cursor-blink 0.8s steps(60) infinite;
 }
+
+@keyframes escribir {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes cursor-blink {
+    0%,
+    100% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #333;
+    }
+}
+
+
 
 /* Subtítulo */
 .home-subtitle {
@@ -36,24 +60,34 @@
     border: 1px solid rgba(255, 255, 255, 0.2); /* Borde estilizado */
     border-radius: 12px; /* Bordes redondeados */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto interactivo */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto interactivo 
+     */
+     text-align: center;
+}
+.home-subtitle:hover {
+    transform: translateY(-2px); /* Efecto de elevación */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
 }
 
 /* Botón */
 .cta-button {
+    font-family: 'Poppins', sans-serif; /* Cambia la fuente */
     display: flex;
     justify-content: center;
     align-items: center; /* Asegura el centrado vertical, aunque no es necesario aquí */
     margin-top: 20px; /* Espacio adicional si es necesario */
     background-color: #5a189a;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
+    color: white; /* Texto blanco */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
     text-decoration: none;
     text-align: center;
     display: inline-block;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+    font-size: 1.1rem;
+    font-weight: 600;
 }
+
 
 .cta-button:hover {
     background-color: #3c096c;

@@ -24,8 +24,7 @@
   
   .proyecto-intro .animate-text:hover {
     color: #3c096c;
-    transform: translateY(-5px);
-    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px); /* Efecto de elevación */
   }
   
   /* Estilo de los proyectos */
