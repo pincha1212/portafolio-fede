@@ -27,48 +27,7 @@
     transform: translateY(-2px); /* Efecto de elevación */
   }
   
-  /* Estilo de los proyectos */
-  .proyecto {
-    background: #fff;
-    margin-bottom: 30px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .proyecto-titulo {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.8rem;
-    color: #5a189a;
-    margin-bottom: 15px;
-  }
-  
-  .proyecto-fecha {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  .proyecto-detalles {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .proyecto-detalles li {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    color: #6a0572;
-    padding: 10px 0;
-    position: relative;
-  }
-  
-  .proyecto-detalles li::before {
-    content: "✔";
-    color: #5a189a;
-    margin-right: 10px;
-  }
-  
+ 
   /* Animación */
   @keyframes fadeIn {
     from {
@@ -78,14 +37,56 @@
       opacity: 1;
     }
   }
+
+
+
+  .subtitulo{
+    font-family: 'Poppins', sans-serif; /* Tipografía moderna y limpia */
+    font-size: 1.2rem; /* Tamaño cómodo para lectura */
+    line-height: 1.8; /* Mejora la legibilidad */
+    color: transparent; /* Texto transparente para aplicar gradiente */
+    background: linear-gradient(120deg, #ff7eb3, #ff758c, #ff5179);
+    background-clip: text; /* Gradiente aplicado solo al texto */
+    -webkit-background-clip: text;
+    animation: textGradient 5s ease-in-out infinite alternate; /* Animación suave */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); /* Sombra sutil */
+    margin: 1.5rem 0;
+    padding: 1rem 1.5rem;
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo translúcido */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde estilizado */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto interactivo 
+     */
+     text-align: center;
+  }
+
+  .subtitulo:hover {
+    transform: translateY(-2px); /* Efecto de elevación */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */  
+  }
+
+  @keyframes textGradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+
   
   /* Optimización para dispositivos móviles */
   @media (max-width: 768px) {
     .proyecto-intro {
       padding: 20px;
     }
+
+    
     .proyecto-titulo {
       font-size: 1.5rem;
     }
+
+
   }
   

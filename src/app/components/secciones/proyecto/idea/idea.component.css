@@ -1,0 +1,76 @@
+ /* Estilo de los proyectos */
+
+ .proyecto {
+    background: #fff; 
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  .proyecto:hover {
+    transform: translateY(-5px); /* Elevación al pasar el cursor */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
+  }
+  
+  .proyecto-titulo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    color: #5a189a;
+    margin-bottom: 15px;
+  }
+  
+  .proyecto-fecha {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .proyecto-detalles {
+    transition: transform 0.3s ease, color 0.3s ease; /* Animación suave */
+    list-style: none;
+    padding: 0;
+  }
+  
+  .proyecto-detalles li {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #6a0572;
+    padding: 10px 0;
+    position: relative;
+  }
+  
+  .proyecto-detalles li::before {
+    content: "✔";
+    color: #5a189a;
+    margin-right: 10px;
+  }
+
+  .proyecto-detalles li:hover {
+    color: #3c096c;
+    transform: translateX(10px); /* Mueve el subtítulo 10px hacia la derecha */
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+  @media screen and (max-width: 768px) {
+    .proyecto-titulo {
+      font-size: 1.5rem;
+    }
+
+    
+  }
+  @media screen and (max-width: 576px) {
+    .proyecto-titulo {
+      font-size: 1.2rem;
+    }
+    
+    
+  }
