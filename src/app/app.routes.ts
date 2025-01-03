@@ -5,6 +5,7 @@ import { ExperienciaComponent } from './components/secciones/experiencia/experie
 import { FormacionComponent } from './components/secciones/formacion/formacion.component';
 import { SobremiComponent } from './components/secciones/sobremi/sobremi.component';
 import { ProyectoComponent } from './components/secciones/proyecto/proyecto.component';
+import { MiniJuegosComponent } from './components/secciones/mini-juegos/mini-juegos.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' }, 
@@ -14,4 +15,5 @@ export const routes: Routes = [
   { path: 'formacion', component: FormacionComponent },
   { path: 'experiencia', component: ExperienciaComponent },
   { path: 'contacto', component: ContactoComponent },
+  { path: 'minijuegos', component: MiniJuegosComponent }
 ];
