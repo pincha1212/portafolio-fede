@@ -12,6 +12,7 @@
 
 /* Contenedor de la imagen como disco de vinilo */
 .profile-vinyl {
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -149,14 +150,31 @@
 
 /* Para tabletas y pantallas medianas */
 @media (max-width: 768px) {
-    .vinyl-container {
-        max-width: 180px;
+    .profile-vinyl {
+        width: 140px; /* Reducir tamaño del disco */
+        height: 140px;
+    }
+    .profile-vinyl img {
+        width: 20px; /* Reducir tamaño del centro del disco */
+        height: 20px;
+    }
+    .phono-arm {
+        width: 50px; /* Reducir tamaño del brazo */
     }
 }
 
+
 /* Para móviles y pantallas pequeñas */
 @media (max-width: 480px) {
-    .vinyl-container {
-        max-width: 140px;
+.profile-vinyl {
+    width: 100px; /* Reducir tamaño del disco */
+    height: 100px;
+    }
+    .profile-vinyl img {
+        width: 20px; /* Reducir tamaño del centro del disco */
+        height: 20px;
+    }
+    .phono-arm {
+        width: 50px; /* Reducir tamaño del brazo */
     }
 }

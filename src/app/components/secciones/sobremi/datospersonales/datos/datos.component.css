@@ -1,84 +1,71 @@
-div {
-    position: absolute;
-    top: 80%;
-    left: 37%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-    width: 300px;
-    opacity: 0;
-    animation: fadeIn 0.3s ease-in-out forwards;
-  }
-  
-  /* Animación para hacer que el div aparezca */
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  .datos-lista {
-    display: grid;
-    grid-template-columns: 1fr 1fr;  /* Dos columnas de igual tamaño */
-    gap: 50px 100%;  /* Espacio entre las columnas */
-    list-style-type: none;  /* Elimina los puntos de la lista */
-    padding: 0;  /* Elimina el padding predeterminado de la lista */
+.datos-lista {
+  justify-content: center;
+  align-items: normal;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* Tres columnas iguales */
+  grid-template-rows: repeat(3, auto);    /* Tres filas automáticas */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  grid-template-areas: 
+    "c1 c2 c3"
+    "c4 vinilo c9"
+    "c6 c8 c7";
 }
-  
 
-/* Estilo de cada elemento de la lista */
 .datos-lista li {
-  font-family: 'Poppins', sans-serif; /* Cambia la fuente */
-  font-size: 1rem;
-    line-height: 1.6;
-    color: #333;
-    animation: slideUp 1s ease-in-out;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra de texto suave */
-    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease; /* Transición más lenta */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
+/* Definición de las áreas de la cuadrícula */
+.c1 {
+  grid-area: c1;
+}
+
+.c2 {
+  grid-area: c2;  /* Espacio vacío */
+}
+
+.c3 {
+  grid-area: c3;
+}
+
+.c4 {
+  grid-area: c4;
+}
+
+.vinilo-perfil {
+  grid-area: vinilo;  /* Se coloca en la posición central */
+}
+
+.c6 {
+  grid-area: c6;
+}
+
+.c7 {
+  grid-area: c7;
+}
+
+.c8 {
+  grid-area: c8;  /* Espacio vacío */
+}
+
+.c9 {
+  grid-area: c9;
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .datos-lista {
+    grid-template-columns: 1fr 1fr;  /* Dos columnas en pantallas pequeñas */
+    grid-template-rows: repeat(5, auto);  /* Más filas según sea necesario */
+    gap: 15px;  /* Hueco reducido entre las celdas */
   }
 
-  .datos-lista li:hover {
-    transform: translateY(-2px); /* Movimiento más sutil */
-    color: #5a189a; /* Cambia el color del texto */
-    font-family: 'Poppins', sans-serif; /* Cambia la fuente */
-    font-size: 1rem; /* Cambia el tamaño de la fuente */
-    text-transform: uppercase; /* Convierte el texto a mayúsculas */
-    background: linear-gradient(90deg, #5a189a, #ff6b6b); /* Fondo degradado */
-    -webkit-background-clip: text; /* Muestra el fondo solo en el texto */
-    background-clip: text; /* Propiedad estándar para compatibilidad */
-    -webkit-text-fill-color: transparent; /* Hace que el texto tenga solo el relleno del fondo */
-    font-weight: bold; /* Negrita para resaltar */  }
-
-  .columna {
-    flex: 1; /* Hace que las columnas ocupen el mismo espacio */
-    min-width: 200px; /* Asegura que las columnas tengan un mínimo de ancho */
+  .datos-lista li {
+    font-size: 0.6rem;  /* Ajusta el tamaño de la fuente */
   }
-  
-  .datos-lista .columna:nth-child(2), 
-.datos-lista .columna:nth-child(3) {
-  flex: 2; /* Hace que algunas columnas ocupen más espacio que otras */
-}
-
-.c1{
-    margin-left: 14%; /* Sin margen izquierdo */
-}
-.c2{
-    margin-right: 30%; /* Sin margen derecho */
-}
-.c3{
-    margin-left: -10%; /* Sin margen izquierdo */
-}
-
-.c4{
-    margin-left: -22%; /* Empuja el elemento hacia la derecha */
-}
-
-.c5{
-    margin-left: 20%; /* Sin margen izquierdo */
-}
-.c6{
-    margin-right: 30%; /* Sin margen derecho */
 }

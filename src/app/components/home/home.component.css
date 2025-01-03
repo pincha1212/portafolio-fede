@@ -12,7 +12,7 @@
 
 .home-title {
     font-family: 'Poppins', sans-serif; /* Tipografía moderna y limpia */
-    font-size: 1.8rem;
+    font-size: 1.47rem;
     color: #5a189a;
     display: inline-block;
     white-space: nowrap;
@@ -91,4 +91,6 @@
 
 .cta-button:hover {
     background-color: #3c096c;
+    transform: scale(1.05); /* Efecto de escalado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
 }

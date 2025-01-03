@@ -9,36 +9,12 @@
     animation: fadeIn 1s ease-in-out;
 }
 
-
-
-
-/* Títulos secundarios */
-.titulo {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2rem;
-    text-align: center;
-    color: #5a189a;
-    margin-bottom: 15px;
-    position: relative;
-}
-
-.titulo::after {
-    content: "";
-    display: block;
-    width: 50px;
-    height: 3px;
-    background: #5a189a;
-    margin: 10px auto 0;
-    animation: slideIn 0.8s ease-in-out;
-}
-
 /* Subtítulos */
 .subtitulo {
     font-family: 'Poppins', sans-serif;
     font-size: 1.5rem;
     color: #3c096c;
     margin: 20px 0 10px;
-    animation: slideUp 1s ease-in-out 0.3s;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra de texto suave */
 }
 
@@ -75,91 +51,6 @@
       background-position: 100% 50%;
     }
   }
-  
-  .habilidades-contenedor {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin: 20px 0;
-}
-
-
-/* Lista de habilidades */
-.habilidades {
-    display: flex;
-    justify-content: space-around;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    margin: 20px 0;
-    gap: 20px;
-}
-
-.habilidades-columna {
-    background-color: rgba(255, 255, 255, 0.1); /* Fondo translúcido */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde estilizado */
-    border-radius: 12px; /* Bordes redondeados */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto interactivo */
-    padding: 15px;
-    margin: 1%;
-    flex: 1;
-    max-width: 300px;
-    text-align: center;
-}
-.habilidades-columna:hover {
-    transform: translateY(-5px); /* Elevación al pasar el cursor */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
-}
-
-
-.habilidades li::before {
-    content: "✔";
-    color: #5a189a;
-    margin-right: 10px;
-}
-
-
-
-.habilidades-columna h3 {
-    font-family: 'Poppins', sans-serif;
-    color: #6a0572;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 5px;
-}
-
-.habilidades-columna p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    color: #841ee9;
-
-
-    margin: 10px 0;
-
-}
-.habilidades-columna p:hover {
-    color: #6a0572;
-    transform: translateX(5px);
-}
-.habilidades-columna p::before {
-    content: "👉";
-    margin-right: 5px;
-    position: absolute;
-    left: -20px;
-    transition: transform 0.3s ease, opacity 0.6s ease; /* Controlamos el tiempo del desvanecimiento */
-}
-
-.habilidades-columna p:hover::before {
-    transform: translateX(-10px);
-    opacity: 1; /* Aparece suavemente al hacer hover */
-
-}
-
-.habilidades-columna p:not(:hover)::before {
-    transform: translateX(0px);
-    opacity: 0; /* Desvanece suavemente cuando el mouse se va */
-}
 
 /* Animaciones */
 @keyframes fadeIn {
@@ -216,9 +107,7 @@
     align-items: center;         /* Opcional: Alinea los elementos al centro en el eje horizontal */
     gap: 20px;                   /* Opcional: Espacio entre los elementos */
   }
-  
-  app-vinilo-perfil,
-  app-datospersonales {
+app-datospersonales {
     width: 100%;                /* Opcional: Hace que los componentes ocupen todo el ancho disponible */
     max-width: 600px;           /* Opcional: Limita el ancho máximo de los componentes */
     padding: 10px;              /* Opcional: Agrega un poco de espacio dentro de cada componente */

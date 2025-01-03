@@ -1,12 +1,15 @@
 <!-- Solo se muestra si mostrarDatos es verdadero -->
 <div *ngIf="mostrarDatos">
-    <ul class="datos-lista">
-      <li class="columna c1"> Federico Barzola</li>
-      <li class="columna c2"> 02/10/2000</li>
-      <li class="columna c3">Guaymallén, Mendoza</li>
-      <li class="columna c4">fedebarzola7&#64;.gmail.com</li>
-      <li class="columna c5"> +54 9 261 3836127</li>
-      <li class="columna c6">Argentino</li>
-    </ul>
-  </div>
-  
+  <ul class="datos-lista">
+    <li class="columna c1"> Federico Barzola</li>    
+    <li class="columna c2"></li> <!-- Espacio vacío -->
+    <li class="columna c3"> 02/10/2000</li>
+    <li class="columna c4">Guaymallén, Mendoza</li>    
+    <app-vinilo-perfil class="vinilo-perfil"></app-vinilo-perfil> <!-- Componente centrado en la posición 5 -->
+    <li class="columna c6">fedebarzola7&#64;.gmail.com</li>
+    <li class="columna c7"> +54 9 261 3836127</li>    
+    <li class="columna c8"></li> <!-- Espacio vacío -->
+    <li class="columna c9"> Argentino</li>
+  </ul>
+</div>
+

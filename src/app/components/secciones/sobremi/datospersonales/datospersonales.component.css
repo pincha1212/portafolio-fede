@@ -1,15 +1,30 @@
+/* Estilos generales del contenedor */
+.flex-container {
+  display: flex; /* Flexbox */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  gap: 1rem; /* Espacio entre elementos */
+  flex-wrap: wrap; /* Ajusta a la pantalla */
+  padding: 1rem; /* Espaciado interno */
+  margin: 0 auto; /* Centra horizontalmente */
+  max-width: 1200px; /* Ancho máximo */
+  box-sizing: border-box; /* Incluye padding en el cálculo del ancho y alto */
+}
+
 /* Estilos para el botón PRUEBAS */
 .btn-pruebas {
   background-color: #5a189a;
   color: white; /* Texto blanco */
-  padding: 10px 20px; /* Espaciado interno */
+  padding: 1rem 2rem; /* Espaciado interno en rem para que se ajuste al tamaño base */
   border-radius: 5px; /* Bordes redondeados */
   border: none; /* Sin bordes visibles */
-  font-size: 1.1rem;
+  font-size: 1.1rem; /* Tamaño de fuente relativo */
   font-weight: 600;
   cursor: pointer;
   position: relative; /* Necesario para posicionar el pseudo-elemento */
   transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+  max-width: 100%; /* El botón no se expandirá más allá de su contenedor */
+  box-sizing: border-box; /* Incluye padding en el cálculo del ancho y alto */
 }
 
 .btn-pruebas:hover {
@@ -56,11 +71,25 @@
   transition: transform 0.3s ease, background-color 0.3s ease; /* Animaciones suaves */
 }
 
-.flex-container {
-  display: flex;
-  justify-content: center;  /* Centra el botón horizontalmente */
-  align-items: center;      /* Centra el botón verticalmente */
+
+/* Adaptaciones para pantallas pequeñas */
+@media (max-width: 768px) {
+  .flex-container {
+
+  }
+  .btn-pruebas {
+    font-size: 1rem;
+    padding: 8px 16px;
+    border-radius: 6px;
+  }
 }
 
-
-
+@media (max-width: 480px) {
+  .flex-container {
+  }
+  .btn-pruebas {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+    border-radius: 4px;
+  }
+}
