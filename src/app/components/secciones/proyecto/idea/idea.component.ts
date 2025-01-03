@@ -23,7 +23,7 @@ export class IdeaComponent {
       ]
     },
     {
-      titulo: 'Proyecto: Aplicación Web en Angular',
+      titulo: 'Proyecto: Hola mundo con Angular (Front-End)',
       fecha: '2024',
       detalles: [
         'Desarrollo de una aplicación web dinámica usando Angular.',
