@@ -34,5 +34,15 @@ export class MiniJuegosComponent {
       }
     });
   }
+
+  disableScroll() {
+    // Desactiva el scrollbar global
+    document.body.style.overflow = 'hidden';
+  }
+
+  enableScroll() {
+    // Reactiva el scrollbar global
+    document.body.style.overflow = '';
+  }
   
 }

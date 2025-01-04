@@ -84,6 +84,7 @@
     transform: translateX(-10px);
     opacity: 1; /* Aparece suavemente al hacer hover */
 
+
 }
 
 .habilidades-columna p:not(:hover)::before {

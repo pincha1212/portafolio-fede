@@ -19,21 +19,67 @@
   }
   
   /* Botón */
-  .game-container .open-modal-btn {
+  .open-modal-btn {
+    font-family: 'Poppins', sans-serif;
     padding: 10px 15px;
     font-size: 16px;
     color: #fff;
     background-color: #5a189a;
-
+    text-transform: uppercase;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
   
-  .game-container .open-modal-btn:hover {
+  .open-modal-btn:hover {
     background-color: #3c096c;
+    transform: scale(1.05); /* Efecto de escalado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
   }
+  
+  .open-modal-btn:focus {
+    outline: none; /* Elimina el contorno predeterminado */
+    background-color: transparent; /* Fondo transparente cuando está enfocado */
+    color: #5a189a; /* El texto se pone verde */
+  }
+  
+  /* Efecto de clic: subrayado */
+  .open-modal-btn:active::after {
+    content: ""; /* Crea el pseudo-elemento */
+    position: absolute; /* Posiciona respecto al botón */
+    bottom: 0; /* En la parte inferior del botón */
+    left: 0; /* Desde el borde izquierdo */
+    height: 3px; /* Altura del subrayado */
+    width: 100%; /* Cubrirá todo el ancho del botón */
+    background-color: #5a189a;
+    transition: transform 0.3s ease; /* Suaviza la animación */
+    transform: scaleX(1); /* Expande el subrayado horizontalmente */
+  }
+  
+  /* Inicialmente el subrayado está contraído */
+  .open-modal-btn::after {
+    content: ""; /* Crea el pseudo-elemento */
+    position: absolute; /* Posiciona respecto al botón */
+    bottom: 0; /* En la parte inferior del botón */
+    left: 0; /* Desde el borde izquierdo */
+    height: 3px; /* Altura del subrayado */
+    width: 100%; /* Cubrirá todo el ancho del botón */
+    background-color: transparent; /* Sin color inicialmente */
+    transform: scaleX(0); /* Subrayado contraído */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Animaciones suaves */
+  }
+
+
+
+
+
+
+
+
+
+
+
   
   /* Modal */
   .modal {

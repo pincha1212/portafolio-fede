@@ -2,12 +2,14 @@
     <h3 class="game-title">Dino Taltalín: Salta y Sobrevive</h3>
     <p class="game-instructions">Haz clic en el botón para abrir el minijuego. Usa la barra espaciadora para saltar y evita los obstáculos.Puedes comer huevos para que te den mas puntos!. Toca la bandera verde para empezar.</p>
     <img src="https://i.ibb.co/FhcxMmw/mini-dino-game.jpg" alt="mini-dino-game">
-    <button class="open-modal-btn">Abrir Minijuego</button>
+    <button class="open-modal-btn">Jugar</button>
     <div class="modal" id="gameModal">
       <div class="modal-content">
         <span class="close-btn">&#10006;</span>
         <iframe 
           src="https://scratch.mit.edu/projects/989316719/embed" 
+          (mouseenter)="disableScroll()"
+          (mouseleave)="enableScroll()"      
           allowtransparency="true" 
           width="485" 
           height="402" 
