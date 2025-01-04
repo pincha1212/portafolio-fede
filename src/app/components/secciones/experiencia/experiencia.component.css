@@ -27,16 +27,41 @@
 
 /* Descripción de la sección */
 #experience .section-description {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.1rem;
-    color: #333;
-    text-align: center;
-    margin-bottom: 30px;
-    animation: fadeIn 1s ease-in-out;
+    font-family: 'Poppins', sans-serif; /* Tipografía moderna y limpia */
+    font-size: 1.2rem; /* Tamaño cómodo para lectura */
+    line-height: 1.8; /* Mejora la legibilidad */
+    color: transparent; /* Texto transparente para aplicar gradiente */
+    background: linear-gradient(120deg, #ff7eb3, #ff758c, #ff5179);
+    background-clip: text; /* Gradiente aplicado solo al texto */
+    -webkit-background-clip: text;
+    animation: textGradient 5s ease-in-out infinite alternate; /* Animación suave */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); /* Sombra sutil */
+    margin: 1.5rem 0;
+    padding: 1rem 1.5rem;
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo translúcido */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde estilizado */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto interactivo 
+     */
+     text-align: center;
+}
+#experience .section-description:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+@keyframes textGradient {
+    from {
+        background-position: 0 50%;
+    }
+    to {
+        background-position: 100% 50%;
+    }
 }
 
 /* Títulos de las subsecciones */
-#experience .subsection-title {
+
+.subsection-title {
     font-family: 'Poppins', sans-serif;
     font-size: 1.8rem;
     color: #5a189a;
@@ -45,10 +70,17 @@
     transition: all 0.3s ease-in-out;
 }
 
-#experience .subsection-title:hover {
+.subsection-title:hover {
     color: #3c096c;
     transform: translateY(-3px);
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.subsection-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: #777;
+    margin-bottom: 20px;
 }
 
 /* Estilos para los elementos de experiencia */
@@ -57,26 +89,26 @@
     padding: 15px;
     background-color: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease-in-out;
 }
 
 .experience-item:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Títulos de las experiencias */
 .experience-title {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    color: #5a189a;
+    margin-bottom: 10px;
+    transition: all 0.3s ease-in-out;
 }
 
 /* Duración de las experiencias */
 .experience-duration {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 1rem;
     color: #777;
     margin-bottom: 10px;
@@ -85,26 +117,28 @@
 /* Estilos para las listas dentro de cada experiencia */
 .experience-item ul {
     list-style: none;
-    padding-left: 20px;
-    margin-top: 10px;
+    padding: 0;
 }
 
 .experience-item ul li {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 1rem;
-    color: #333;
-    margin-bottom: 5px;
+    color: #6a0572;
+    padding: 10px 0;
+    position: relative;
+}
+.experience-item ul li:hover {
+    color: #3c096c;
+    transform: translateX(10px);
 }
 
-/* Resumen de la sección */
-.experience-summary {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.1rem;
-    color: #555;
-    line-height: 1.6;
-    margin-top: 30px;
-    text-align: center;
+.experience-item ul li::before {
+    content: "✔";
+    color: #5a189a;
+    margin-right: 10px;
 }
+/* Resumen de la sección */
+
 
 /* Animación de desvanecimiento */
 @keyframes fadeIn {

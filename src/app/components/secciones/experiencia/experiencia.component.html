@@ -1,48 +1,22 @@
 <section id="experience" aria-labelledby="experience-title">
     <h2 id="experience-title" class="section-title">De la Teoría a la Práctica</h2>
-    <p class="section-description">Cada experiencia ha sido una oportunidad para aprender, innovar y superar desafíos. Aquí están los momentos clave de mi recorrido profesional.</p>
+    <p class="section-description">
+      Cada experiencia ha sido una oportunidad para aprender, innovar y superar desafíos. Aquí están los momentos clave de mi recorrido profesional.
+    </p>
   
-    <h3 class="subsection-title">Cocina y Gastronomía</h3>
-  
-    <div class="experience-item">
-        <h4 class="experience-title">Ayudante de Cocina – Restaurante X, Mendoza</h4>
-        <p class="experience-duration">(Año – Año)</p>
+    <ng-container *ngFor="let experience of experiences">
+      <h3 class="subsection-title">{{ experience.category }}</h3>
+      <div class="experience-item" *ngFor="let item of experience.items">
+        <h4 class="experience-title">{{ item.title }}</h4>
+        <p class="experience-duration">{{ item.duration }}</p>
         <ul>
-            <li>Preparación de platos bajo estándares de calidad.</li>
-            <li>Decoración creativa de platos.</li>
-            <li>Participación en el desarrollo de productos artesanales.</li>
+          <li *ngFor="let detail of item.details">{{ detail }}</li>
         </ul>
-    </div>
+      </div>
+    </ng-container>
   
-    <div class="experience-item">
-        <h4 class="experience-title">Panadero Artesano – Panadería Y</h4>
-        <p class="experience-duration">(Año – Año)</p>
-        <ul>
-            <li>Elaboración de panes artesanales con técnicas tradicionales.</li>
-            <li>Innovación en recetas para productos diferenciados.</li>
-        </ul>
-    </div>
+    <p class="section-description">
+      Mis experiencias reflejan mi pasión por combinar la creatividad y la funcionalidad, tanto en el mundo gastronómico como en el digital. Siempre busco aprender, crecer y superar nuevos desafíos.
+    </p>
+  </section>
   
-    <h3 class="subsection-title">Desarrollo Web</h3>
-  
-    <div class="experience-item">
-        <h4 class="experience-title">Desarrollador Front-End – Freelance</h4>
-        <p class="experience-duration">(Año – Actualidad)</p>
-        <ul>
-            <li>Desarrollo de aplicaciones web dinámicas utilizando Angular.</li>
-            <li>Optimización de interfaces para mejorar la experiencia del usuario.</li>
-            <li>Despliegue de proyectos en GitHub Pages.</li>
-        </ul>
-    </div>
-  
-    <div class="experience-item">
-        <h4 class="experience-title">Proyecto Personal: Portafolio Web</h4>
-        <p class="experience-duration">(Año)</p>
-        <ul>
-            <li>Creación de un portafolio interactivo que combina creatividad y funcionalidad.</li>
-            <li>Uso de tecnologías modernas para diseño y desarrollo.</li>
-        </ul>
-    </div>
-  
-    <p class="experience-summary">Mis experiencias reflejan mi pasión por combinar la creatividad y la funcionalidad, tanto en el mundo gastronómico como en el digital. Siempre busco aprender, crecer y superar nuevos desafíos.</p>
-</section>
