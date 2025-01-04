@@ -2,22 +2,15 @@
     <h2 id="learning-path-title" class="section-title">Mi Camino de Aprendizaje</h2>
     <p class="section-description">Creo que aprender nunca termina, y cada paso en mi formación ha sido una oportunidad para crecer y mejorar.</p>
   
-    <h3 class="subsection-title">Cursos y Certificaciones Técnicas</h3>
-    <ul class="certificate-list">
-      <li><span class="certificate-title">Certificación en Angular Avanzado</span> – Plataforma X (Año)</li>
-      <li><span class="certificate-title">Curso de Diseño y UX/UI</span> – Academia Y (Año)</li>
-    </ul>
-  
-    <h3 class="subsection-title">Formación Culinaria</h3>
-    <ul class="course-list">
-      <li><span class="course-title">Taller de Panadería Artesanal</span> – Escuela Z (Año)</li>
-      <li><span class="course-title">Curso de Decoración de Platos</span> – Maestro Culinario Q (Año)</li>
-    </ul>
-  
-    <h3 class="subsection-title">Educación Formal</h3>
-    <ul class="degree-list">
-      <li><span class="degree-title">Carrera/Título</span> – Institución (Año) (Si aplica)</li>
-    </ul>
+    <div *ngFor="let section of sections">
+      <h3 class="subsection-title">{{ section.title }}</h3>
+      <ul class="list">
+        <li *ngFor="let item of section.items">
+          <span class="item-title">{{ item.title }}</span> – {{ item.source }} ({{ item.year }})
+        </li>
+      </ul>
+    </div>
+    
     
     <div class="timeline">
       <p><strong>Formato de Línea de Tiempo:</strong> (Opcional)</p>
