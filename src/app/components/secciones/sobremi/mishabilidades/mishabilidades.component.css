@@ -64,15 +64,14 @@
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
     color: #841ee9;
-
-
     margin: 10px 0;
-
 }
+
 .habilidades-columna p:hover {
     color: #6a0572;
     transform: translateX(5px);
 }
+
 .habilidades-columna p::before {
     content: "👉";
     margin-right: 5px;

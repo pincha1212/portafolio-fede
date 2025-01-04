@@ -71,18 +71,24 @@
     color: #5a189a;
   }
   /* Título del juego */
-.game-title {
-    font-size: 20px;
+  h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #6a0572;
     font-weight: bold;
-    margin-bottom: 5px;
-    color: #333;
-  }
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
   
   /* Instrucciones */
-  .game-instructions {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 15px;
-    line-height: 1.5;
-  }
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #841ee9;
+    margin: 10px 0;
+}
 
+p:hover {
+    color: #6a0572;
+}
