@@ -13,6 +13,10 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "optimization": true,
+            "outputHashing": "all",
+            "sourceMap": false,
+            "extractLicenses": true,
             "outputPath": "dist/portafolio-fede",
             "index": "src/index.html",
             "browser": "src/main.ts",
