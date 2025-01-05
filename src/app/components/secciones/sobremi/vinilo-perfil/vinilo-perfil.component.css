@@ -6,7 +6,7 @@
     align-items: center;
     position: relative;
     width: 100%; /* Asegura que sea adaptable */
-    max-width: 220px; /* Tamaño máximo del disco */
+    max-width: 18rem; /* Tamaño máximo ajustado con rem */
     margin: 0 auto;
 }
 
@@ -16,15 +16,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 220px; /* Tamaño del disco */
-    height: 220px;
+    width: 18rem; /* Tamaño del disco usando rem */
+    height: 18rem;
     margin: 0 auto;
     border-radius: 50%; /* Forma circular */
     background: radial-gradient(circle, #222 40%, #444 60%, #666 80%, #222 100%);
-    box-shadow: 0 4px 10px rgb(90, 24, 154); /* Sombra sutil */
+    box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.3); /* Sombra para resaltar */
     position: relative;
     animation: spinVinyl 8s linear infinite, fadeInUp 1s ease-out; /* Animación giratoria y de entrada */
-    border: 8px solid #f1f1f1; /* Borde sutil alrededor del disco */
+    border: 0.5px solid #f1f1f1; /* Borde sutil alrededor del disco */
     transition: box-shadow 1s ease; /* Transición suave en hover */
 }
 
@@ -42,19 +42,19 @@
 
 /* Imagen central (etiqueta del disco) */
 .profile-vinyl img {
-    width: 80px; /* Tamaño del centro del disco */
-    height: 80px;
+    width: 5rem; /* Tamaño del centro del disco con rem */
+    height: 5rem;
     border-radius: 50%; /* Circular */
     object-fit: cover;
-    border: 4px solid white; /* Borde alrededor del centro */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Sombra para resaltar */
+    border: 0.25rem solid white;
+    box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añadimos transiciones */
 }
 
 /* Efecto interactivo en hover */
 .profile-vinyl:hover {
     animation-play-state: paused; /* Pausa el giro al pasar el mouse */
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25); /* Sombra más grande en hover */
+    box-shadow: 0 0.4rem 1.25rem rgba(0, 0, 0, 0.25); /* Sombra más grande en hover */
 }
 
 .profile-vinyl:hover img {
@@ -75,7 +75,7 @@
 @keyframes armFadeInUp {
     0% {
         opacity: 0;
-        transform: translateY(20px) rotate(30deg); /* Desplaza hacia abajo y rota */
+        transform: translateY(1.25rem) rotate(30deg); /* Desplaza hacia abajo y rota */
     }
     100% {
         opacity: 1;
@@ -99,8 +99,8 @@
 
 /* Brazo fonocaptor (rectángulo estático) */
 .phono-arm {
-    width: 170px; /* Largo del brazo */
-    height: 6px; /* Grosor del brazo */
+    width: 10.5rem; /* Brazo ajustado con rem */
+    height: 0.375rem; /* Grosor ajustado con rem */
     background-color: #666; /* Color del brazo */
     position: absolute;
     top: 50%; /* Ajusta verticalmente para que quede alineado con el disco */
@@ -114,27 +114,27 @@
 /* Cabezal del fonocaptor (donde se encuentra la aguja) */
 .phono-arm::after {
     content: '';
-    width: 10px; /* Tamaño del cabezal */
-    height: 20px; /* Altura del cabezal */
+    width: 0.625rem; /* Tamaño del cabezal */
+    height: 1.25rem; /* Altura del cabezal */
     background-color: #333; /* Color del cabezal */
-    border-radius: 5px; /* Bordes redondeados */
+    border-radius: 1.25rem; /* Bordes redondeados */
     position: absolute;
-    top: -5px; /* Posición para que esté justo en el extremo del brazo */
+    top: -0.313rem; /* Posición para que esté justo en el extremo del brazo */
     left: 100%; /* Coloca el cabezal en el borde del brazo */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra para darle realismo */
+    box-shadow: 0 0.25rem 0.313rem rgba(0, 0, 0, 0.3); /* Sombra para darle realismo */
 }
 
 /* Aguja del fonocaptor */
 .phono-arm::before {
     content: '';
-    width: 2px; /* Grosor de la aguja */
-    height: 10px; /* Largo de la aguja */
+    width: 0.125rem; /* Grosor de la aguja */
+    height: 0.625rem; /* Largo de la aguja */
     background-color: #ccc; /* Color de la aguja */
     position: absolute;
-    top: 15px; /* Posición vertical para que quede debajo del cabezal */
+    top: 0.938rem; /* Posición vertical para que quede debajo del cabezal */
     left: 50%; /* Centrado horizontalmente en el cabezal */
     transform: translateX(-50%); /* Ajuste de centrado */
-    border-radius: 1px; /* Bordes suaves para un toque realista */
+    border-radius: 0.63rem; /* Bordes suaves para un toque realista */
 }
 
 .phono-arm:hover {
@@ -144,37 +144,41 @@
 }
 
 .phono-arm::before {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra más suave */
+    background: linear-gradient(to bottom, #eee, #aaa); /* Efecto degradado */
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2); /* Sombra más suave */
+}
+.phono-arm:hover::after {
+    transform: translateX(0.313rem); /* Desplazar el cabezal ligeramente */
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.5);
+
 }
 
 
-/* Para tabletas y pantallas medianas */
+
 @media (max-width: 768px) {
     .profile-vinyl {
-        width: 140px; /* Reducir tamaño del disco */
-        height: 140px;
+        width: 11rem; /* Reducir tamaño con rem */
+        height: 11rem;
     }
     .profile-vinyl img {
-        width: 20px; /* Reducir tamaño del centro del disco */
-        height: 20px;
+        width: 2.5rem; /* Reducir el centro del disco */
+        height: 2.5rem;
     }
     .phono-arm {
-        width: 50px; /* Reducir tamaño del brazo */
+        width: 6rem; /* Reducir tamaño del brazo */
     }
 }
 
-
-/* Para móviles y pantallas pequeñas */
 @media (max-width: 480px) {
-.profile-vinyl {
-    width: 100px; /* Reducir tamaño del disco */
-    height: 100px;
+    .profile-vinyl {
+        width: 6.25rem; /* Ajuste para pantallas pequeñas */
+        height: 6.25rem;
     }
     .profile-vinyl img {
-        width: 20px; /* Reducir tamaño del centro del disco */
-        height: 20px;
+        width: 2.5rem;
+        height: 2.5rem;
     }
     .phono-arm {
-        width: 50px; /* Reducir tamaño del brazo */
+        width: 3rem;
     }
 }

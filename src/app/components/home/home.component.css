@@ -1,11 +1,11 @@
 /* Contenedor sobre mí */
 .sobremi {
-    max-width: 800px;
+    max-width: 80%; /* Proporcional al ancho de la pantalla */
     margin: 0 auto;
-    padding: 30px;
+    padding: 2rem; /* Espaciado relativo */
     background: linear-gradient(135deg, #f3e6ff, #e3f6ff); /* Fondo suave */
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0.625rem; /* 10px -> rem */
+    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1); /* Relativo a la escala */
     animation: fadeIn 1s ease-in-out;
 }
 
@@ -21,12 +21,12 @@
 
 .home-title {
     font-family: 'Poppins', sans-serif; /* Tipografía moderna y limpia */
-    font-size: 1.47rem;
+    font-size: 1.5rem; /* 24px */
     color: #5a189a;
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 3px solid #333; /* Simula el cursor de escritura */
+    border-right: 0.1875rem solid #333; /* 3px -> rem */
     width: 0;
     animation: escribir 6s steps(60) 1s forwards, cursor-blink 0.8s steps(60) infinite;
 }
@@ -55,7 +55,7 @@
 /* Subtítulo */
 .home-subtitle {
     font-family: 'Poppins', sans-serif; /* Tipografía moderna y limpia */
-    font-size: 1.2rem; /* Tamaño cómodo para lectura */
+    font-size: 1.2rem; /* 19px */
     line-height: 1.8; /* Mejora la legibilidad */
     color: transparent; /* Texto transparente para aplicar gradiente */
     background: linear-gradient(120deg, #ff7eb3, #ff758c, #ff5179);
@@ -66,16 +66,16 @@
     margin: 1.5rem 0;
     padding: 1rem 1.5rem;
     background-color: rgba(255, 255, 255, 0.1); /* Fondo translúcido */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde estilizado */
-    border-radius: 12px; /* Bordes redondeados */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border: 0.0625rem solid rgba(255, 255, 255, 0.2); /* 1px -> rem */
+    border-radius: 0.75rem; /* 12px -> rem */
+    box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1); /* Relativo */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto interactivo 
      */
      text-align: center;
 }
 .home-subtitle:hover {
     transform: translateY(-2px); /* Efecto de elevación */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
 }
 
 /* Botón */
@@ -87,13 +87,13 @@
     margin-top: 20px; /* Espacio adicional si es necesario */
     background-color: #5a189a;
     color: white; /* Texto blanco */
-    padding: 10px 20px; /* Espaciado interno */
-    border-radius: 5px; /* Bordes redondeados */
+    padding: 0.625rem 1.25rem; /* 10px 20px -> rem */
+    border-radius: 0.3125rem; /* 5px -> rem */
     text-decoration: none;
     text-align: center;
     display: inline-block;
     transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
-    font-size: 1.1rem;
+    font-size: 1rem; /* 16px */
     font-weight: 600;
 }
 
@@ -110,35 +110,58 @@
 .cta-button:hover {
     background-color: #3c096c;
     transform: scale(1.05); /* Efecto de escalado */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1); /* Relativo */
 }
 
 @media screen and (max-width: 768px) {
+    /* Desactiva animaciones generales */
+    * {
+        animation: none !important;
+        transition: none !important; /* También elimina transiciones */
+    }
+
+    /* Ajustes específicos para elementos */
     .home-title {
-        font-size: 0.65rem;
+        font-size: 1.2rem; /* Ajusta el tamaño si es necesario */
+        border: none; /* Quita el cursor de escritura */
+        width: 100%; /* Muestra todo el texto */
+        white-space: normal; /* Permite multi-línea */
     }
 
     .home-subtitle {
-        font-size: 0.65rem;
+        background: none; /* Quita el gradiente animado */
+        color: #5a189a; /* Establece un color fijo */
     }
 
     .cta-button {
-        font-size: 0.65rem;
+        transform: none; /* Sin escalado */
+        box-shadow: none; /* Sin sombra interactiva */
     }
     
 }
 
 @media screen and (max-width: 480px) {
+    /* Desactiva animaciones generales */
+    * {
+        animation: none !important;
+        transition: none !important; /* También elimina transiciones */
+    }
+
+    /* Ajustes específicos para elementos */
     .home-title {
-        font-size: 0.65rem;
+        font-size: 1.2rem; /* Ajusta el tamaño si es necesario */
+        border: none; /* Quita el cursor de escritura */
+        width: 100%; /* Muestra todo el texto */
+        white-space: normal; /* Permite multi-línea */
     }
 
     .home-subtitle {
-        font-size: 0.65rem;
+        background: none; /* Quita el gradiente animado */
+        color: #5a189a; /* Establece un color fijo */
     }
 
     .cta-button {
-        font-size: 0.65rem;
+        transform: none; /* Sin escalado */
+        box-shadow: none; /* Sin sombra interactiva */
     }
-    
 }

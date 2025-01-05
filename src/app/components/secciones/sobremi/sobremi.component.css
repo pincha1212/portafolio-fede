@@ -1,49 +1,49 @@
 /* Contenedor sobre mí */
 .sobremi {
-    max-width: 800px;
+    max-width: 50rem; /* Equivale a 800px si 1rem = 16px */
     margin: 0 auto;
-    padding: 30px;
+    padding: 2rem; /* 32px */
     background: linear-gradient(135deg, #f3e6ff, #e3f6ff);
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0.625rem; /* 10px */
+    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1); /* 2px, 8px */
     animation: fadeIn 1s ease-in-out;
 }
 
 /* Descripciones */
 .descripcion {
-    font-family: 'Poppins', sans-serif; /* Tipografía moderna y limpia */
-    font-size: 1.2rem; /* Tamaño cómodo para lectura */
-    line-height: 1.8; /* Mejora la legibilidad */
-    color: transparent; /* Texto transparente para aplicar gradiente */
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333; /* Fallback color */
     background: linear-gradient(120deg, #ff7eb3, #ff758c, #ff5179);
-    background-clip: text; /* Gradiente aplicado solo al texto */
+    background-clip: text;
     -webkit-background-clip: text;
-    animation: textGradient 5s ease-in-out infinite alternate; /* Animación suave */
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); /* Sombra sutil */
+    -webkit-text-fill-color: transparent; /* Gradiente aplicado al texto */
+    animation: textGradient 5s ease-in-out infinite alternate;
+    text-shadow: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.15); /* 1px, 2px */
     margin: 1.5rem 0;
     padding: 1rem 1.5rem;
-    background-color: rgba(255, 255, 255, 0.1); /* Fondo translúcido */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde estilizado */
-    border-radius: 12px; /* Bordes redondeados */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto interactivo */
-  }
-  
-  .descripcion:hover {
-    transform: translateY(-5px); /* Elevación al pasar el cursor */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
-  }
-  
-  @keyframes textGradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    100% {
-      background-position: 100% 50%;
-    }
-  }
+    border: 0.0625rem solid rgba(255, 255, 255, 0.2); /* 1px */
+    border-radius: 0.75rem; /* 12px */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.descripcion:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 0.75rem rgba(0, 0, 0, 0.2); /* 8px, 12px */
+}
 
 /* Animaciones */
+@keyframes textGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -53,42 +53,30 @@
     }
 }
 
-@keyframes slideIn {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(0);
-    }
+/* Contenedor de datos */
+.containerdatos {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.25rem; /* 20px */
 }
 
-@keyframes slideUp {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+app-datospersonales {
+    width: 100%;
+    max-width: 37.5rem; /* 600px */
+    padding: 0.625rem; /* 10px */
 }
 
 /* Optimización para dispositivos móviles */
 @media (max-width: 768px) {
     .sobremi {
-        padding: 20px;
+        padding: 1.25rem;
+        animation: none; /* Sin animaciones */
+    }
+    .descripcion {
+        animation: none; /* Sin animaciones */
+        transform: none;
+        box-shadow: none;
     }
 }
-.containerdatos {
-    display: flex;               /* Activa Flexbox */
-    flex-direction: column;      /* Apila los elementos de arriba a abajo (vertical) */
-    justify-content: flex-start; /* Alinea los elementos al principio en el eje vertical */
-    align-items: center;         /* Opcional: Alinea los elementos al centro en el eje horizontal */
-    gap: 20px;                   /* Opcional: Espacio entre los elementos */
-  }
-app-datospersonales {
-    width: 100%;                /* Opcional: Hace que los componentes ocupen todo el ancho disponible */
-    max-width: 600px;           /* Opcional: Limita el ancho máximo de los componentes */
-    padding: 10px;              /* Opcional: Agrega un poco de espacio dentro de cada componente */
-  }
-  
