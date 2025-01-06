@@ -1,0 +1,11 @@
+<div *ngIf="post">
+    <h1>{{ post.title }}</h1>
+    <p>{{ post.description }}</p>
+    <div>{{ post.content }}</div>
+  </div>
+  <p *ngIf="!post">Post no encontrado</p>
+
+  <div class="button-container">
+    <button [routerLink]="'/blog'" routerLinkActive="active" class="button-blog">Ir al Blog</button>
+
+  </div>

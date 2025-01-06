@@ -75,6 +75,36 @@
     }
   }
 
+.button-container{
+  justify-content: center;
+  margin-top: 20px;
+  font-family: Poppins, sans-serif;
+  display: inline-block
+}
+
+.button-blog{
+  border: none;
+  background-color: #5a189a;
+  color: #fff;
+  padding: .625rem 1.25rem;
+  border-radius: .3125rem;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color .3s, transform .3s;
+  font-size: 1rem;
+  font-weight: 600
+}
+
+.button-blog:hover {
+  cursor: pointer;
+  background-color: #3c096c;
+  transform: scale(1.05);
+  box-shadow: 0 .25rem .375rem rgba(0, 0, 0, .1)
+}
+
+
+
+
   
   /* Optimización para dispositivos móviles */
   @media (max-width: 768px) {

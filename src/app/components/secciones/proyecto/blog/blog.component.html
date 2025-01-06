@@ -1,0 +1,20 @@
+<div class="blog">
+    <div class="blog-container">
+        <div class="button-container">
+
+            <!-- blog.component.html -->
+            <h1 class="blog-title">Mi blog de notas</h1>
+            <div *ngFor="let post of blogPosts">
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.description }}</p>
+                <a [routerLink]="['/blog', post.id]">Leer más</a>
+            </div>
+
+
+
+            <button [routerLink]="'/proyecto'" routerLinkActive="active" class="button-blog">Salir del Blog</button>
+        </div>
+    </div>
+
+
+</div>

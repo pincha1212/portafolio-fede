@@ -22,6 +22,22 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'blog',
+    loadComponent: () =>
+      import('./components/secciones/proyecto/blog/blog.component').then(
+        (m) => m.BlogComponent
+      ),
+  },
+
+  {
+    path: 'blog/:id', // El parámetro ahora acepta slugs
+    loadComponent: () =>
+      import('./components/secciones/proyecto/blog/details/details.component').then(
+        (m) => m.DetailsComponent
+      ),
+  },
+  
+  {
     path: 'formacion',
     loadComponent: () =>
       import('./components/secciones/formacion/formacion.component').then(
