@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component,OnInit } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
+import { BlogService } from '../../../../../blog.service';
 
 @Component({
   selector: 'app-details',
@@ -13,28 +14,20 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
 })
 export class DetailsComponent implements OnInit {
 
-  blogPosts = [
-    {
-      id: 'como-manejar-rutas-anidadas-angular',
-      title: 'Cómo manejar rutas anidadas en Angular',
-      description: 'Aprende a configurar rutas anidadas paso a paso.',
-      content: 'Aquí iría el contenido completo del post sobre rutas anidadas.',
-    },
-    {
-      id: 'mejorando-accesibilidad-proyectos-web',
-      title: 'Mejorando la accesibilidad en tus proyectos web',
-      description: 'Consejos para interfaces accesibles y amigables.',
-      content: 'Contenido completo del post sobre accesibilidad.',
-    },
-  ];
-
   post: any;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(
+    private route: ActivatedRoute,
+    private blogService: BlogService // Inyectamos el servicio
+  ) {}
 
-  ngOnInit() {
-    const postSlug = this.route.snapshot.paramMap.get('id');
-    this.post = this.blogPosts.find(post => post.id === postSlug);
+  ngOnInit(): void {
+    // Obtén el id de la publicación desde la ruta
+    const postId = this.route.snapshot.paramMap.get('id');
+
+    // Obtén los detalles del post usando el servicio
+    if (postId) {
+      this.post = this.blogService.getPostById(postId);
+    }
   }
-
 }

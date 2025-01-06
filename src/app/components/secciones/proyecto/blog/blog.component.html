@@ -1,20 +1,16 @@
 <div class="blog">
     <div class="blog-container">
-        <div class="button-container">
-
-            <!-- blog.component.html -->
-            <h1 class="blog-title">Mi blog de notas</h1>
-            <div *ngFor="let post of blogPosts">
-                <h2>{{ post.title }}</h2>
-                <p>{{ post.description }}</p>
-                <a [routerLink]="['/blog', post.id]">Leer más</a>
-            </div>
-
-
-
-            <button [routerLink]="'/proyecto'" routerLinkActive="active" class="button-blog">Salir del Blog</button>
+      <div class="button-container">
+        <!-- blog.component.html -->
+        <h1 class="blog-title">Mi blog de notas</h1>
+  
+        <div *ngFor="let post of posts" class="post">
+          <div class="post-content" (click)="viewPost(post.id)">
+            <h2 class="post-title">{{ post.title }}</h2>
+            <p class="post-snippet">{{ post.content | slice: 0:100 }}...</p>
+          </div>
         </div>
+      </div>
     </div>
-
-
-</div>
+  </div>
+  

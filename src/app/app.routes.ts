@@ -30,7 +30,7 @@ export const routes: Routes = [
   },
 
   {
-    path: 'blog/:id', // El parámetro ahora acepta slugs
+    path: 'blog/:id',
     loadComponent: () =>
       import('./components/secciones/proyecto/blog/details/details.component').then(
         (m) => m.DetailsComponent
@@ -65,5 +65,5 @@ export const routes: Routes = [
         (m) => m.MiniJuegosComponent
       ),
   },
-  { path: '**', redirectTo: '/home', pathMatch: 'full' }, // Ruta comodín para manejar errores
+  { path: '**', redirectTo: '/home', pathMatch: 'full' }, 
 ];
