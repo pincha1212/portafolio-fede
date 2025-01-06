@@ -1,4 +1,4 @@
-import{L as a}from"./chunk-WVTPRLOA.js";var s=class e{blogPosts=[{id:"como-manejar-rutas-anidadas-angular",title:"C\xF3mo manejar rutas anidadas en Angular",description:"Aprende a configurar rutas anidadas paso a paso.",content:`
+import{L as a}from"./chunk-BDJXH6CQ.js";var s=class e{blogPosts=[{id:"como-manejar-rutas-anidadas-angular",title:"C\xF3mo manejar rutas anidadas en Angular",description:"Aprende a configurar rutas anidadas paso a paso.",content:`
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod velit vel lacus gravida, id scelerisque risus 
       pretium. Suspendisse potenti. Integer viverra lorem ac libero convallis, ac laoreet elit tincidunt. In nec libero sit 
       amet lorem laoreet tincidunt ut id magna. Proin vel consequat ipsum, eu malesuada arcu. Aliquam erat volutpat. Curabitur 
