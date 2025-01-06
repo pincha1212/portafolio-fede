@@ -6,7 +6,7 @@
 >
   <h2 class="proyecto-titulo">{{ proyecto.titulo }}</h2>
   <p class="proyecto-fecha" aria-label="Año de creación del proyecto">{{ proyecto.fecha }}</p>
-  <ul class="proyecto-descripcion">
-    <li *ngFor="let desc of proyecto.descripcion">{{ desc }}</li>
-  </ul>
+  <div class="proyecto-descripcion">
+    <p>{{ proyecto.descripcion | slice:0:100 }}...</p>
+  </div>  
 </div>
