@@ -1,0 +1,11 @@
+<div *ngIf="proyecto; else notFound">
+    <h1>{{ proyecto.titulo }}</h1>
+    <p>{{ proyecto.descripcion }}</p>
+  </div>
+  <ng-template #notFound>
+    <p>Proyecto no encontrado.</p>
+  </ng-template>
+
+  <button>
+    <a [routerLink]="'/proyecto'">Ver Proyecto</a>
+  </button>

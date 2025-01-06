@@ -1,9 +1,12 @@
-
- 
-    <div *ngFor="let proyecto of proyectos" class="proyecto">
-    <h2 class="proyecto-titulo">{{ proyecto.titulo }}</h2>
-    <p class="proyecto-fecha" aria-label="Año de creación del proyecto">{{ proyecto.fecha }}</p>
-    <ul class="proyecto-detalles">
-      <li *ngFor="let detalle of proyecto.detalles">{{ detalle }}</li>
-    </ul>
-  </div>
+<div
+  *ngFor="let proyecto of proyectos"
+  class="proyecto"
+  [routerLink]="'/proyecto/' + proyecto.slug"
+  style="cursor: pointer;"
+>
+  <h2 class="proyecto-titulo">{{ proyecto.titulo }}</h2>
+  <p class="proyecto-fecha" aria-label="Año de creación del proyecto">{{ proyecto.fecha }}</p>
+  <ul class="proyecto-descripcion">
+    <li *ngFor="let desc of proyecto.descripcion">{{ desc }}</li>
+  </ul>
+</div>

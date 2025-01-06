@@ -21,6 +21,15 @@ export const routes: Routes = [
         (m) => m.ProyectoComponent
       ),
   },
+
+  {
+    path: 'proyecto/:id',
+    loadComponent: () =>
+      import('./components/secciones/proyecto/slugs/slugs.component').then(
+        (m) => m.SlugsComponent
+      ),
+  },
+
   {
     path: 'blog',
     loadComponent: () =>

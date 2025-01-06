@@ -1,36 +1,20 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ProyectosService } from '../../../../services/proyectos.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-idea',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './idea.component.html',
   styleUrl: './idea.component.css'
 })
-export class IdeaComponent {
+export class IdeaComponent implements OnInit {
+  proyectos: any[] = [];
 
-  titulo: any;
-  fecha: any;
-  detalles: any;
+  constructor(private proyectosService: ProyectosService) {}
 
-  proyectos = [
-    {
-      titulo: 'Proyecto Personal: Portafolio Web',
-      fecha: '2024',
-      detalles: [
-        'Creación de un portafolio interactivo que combina creatividad y funcionalidad.',
-        'Uso de tecnologías modernas para diseño y desarrollo.'
-      ]
-    },
-    {
-      titulo: 'Proyecto: Hola mundo con Angular (Front-End)',
-      fecha: '2024',
-      detalles: [
-        'Desarrollo de una aplicación web dinámica usando Angular.',
-        'Optimización de la interfaz para una mejor experiencia de usuario.',
-        'Despliegue de proyectos en GitHub Pages.'
-      ]
-    }
-  ];
-
+  ngOnInit(): void {
+    this.proyectos = this.proyectosService.getProyectos();
+  }
 }
