@@ -30,4 +30,7 @@ export class DetailsComponent implements OnInit {
       this.post = this.blogService.getPostById(postId);
     }
   }
+  isArray(content: any): boolean {
+    return Array.isArray(content);
+  }
 }

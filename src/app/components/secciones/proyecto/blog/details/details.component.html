@@ -1,8 +1,26 @@
 <div class="blog-container">
+
     <div *ngIf="post">
         <h1 class="blog-title">{{ post.title }}</h1>
-        <p class="blog-content">{{ post.content }}</p>
-    </div>
+        <div class="blog-content">
+          <!-- Caso: post.content es un array -->
+          <ng-container *ngIf="isArray(post.content); else stringContent">
+            <ng-container *ngFor="let element of post.content">
+              <p *ngIf="element.type === 'text'">{{ element.text }}</p>
+              <img *ngIf="element.type === 'image' && element.src" 
+                   [src]="element.src" 
+                   [alt]="element.alt || 'Imagen sin descripción'" 
+                   class="blog-image" />
+            </ng-container>
+          </ng-container>
+      
+          <!-- Caso: post.content es un string -->
+          <ng-template #stringContent>
+            <p>{{ post.content }}</p>
+          </ng-template>
+        </div>
+      </div>
+      
     <div *ngIf="!post" class="blog-error">
         <p>Publicación no encontrada.</p>
     </div>
