@@ -1,15 +1,19 @@
-<div>
+<div class="blog-container">
     <div *ngIf="post">
-        <h1>{{ post.title }}</h1>
-        <p>{{ post.content }}</p>
+        <h1 class="blog-title">{{ post.title }}</h1>
+        <p class="blog-content">{{ post.content }}</p>
     </div>
-    <div *ngIf="!post">
+    <div *ngIf="!post" class="blog-error">
         <p>Publicación no encontrada.</p>
     </div>
 
-
     <div class="button-container">
-        <button [routerLink]="'/blog'" routerLinkActive="active" class="button-blog">Ir al Blog</button>
-
+        <button 
+            [routerLink]="'/blog'" 
+            routerLinkActive="active" 
+            class="button-blog"
+            aria-label="Volver al listado del blog">
+            Ir al Blog
+        </button>
     </div>
 </div>

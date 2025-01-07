@@ -1,11 +1,11 @@
-<div *ngIf="proyecto; else notFound">
-    <h1>{{ proyecto.titulo }}</h1>
-    <p>{{ proyecto.descripcion }}</p>
+<div *ngIf="proyecto; else notFound" class="proyecto-contenedor">
+  <h1 class="proyecto-titulo">{{ proyecto.titulo }}</h1>
+  <p class="proyecto-descripcion">{{ proyecto.descripcion }}</p>
+  <div class="button-container">
+    <button [routerLink]="'/proyecto'" class="proyecto-boton">Volver
+    </button>
   </div>
-  <ng-template #notFound>
-    <p>Proyecto no encontrado.</p>
-  </ng-template>
-
-  <button>
-    <a [routerLink]="'/proyecto'">Ver Proyecto</a>
-  </button>
+</div>
+<ng-template #notFound>
+  <p class="proyecto-error">Proyecto no encontrado.</p>
+</ng-template>

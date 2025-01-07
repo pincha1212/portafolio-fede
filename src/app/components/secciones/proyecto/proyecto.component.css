@@ -76,10 +76,9 @@
   }
 
 .button-container{
-  justify-content: center;
   margin-top: 20px;
   font-family: Poppins, sans-serif;
-  display: inline-block
+  display: inline-block;
 }
 
 .button-blog{
@@ -92,7 +91,7 @@
   text-align: center;
   transition: background-color .3s, transform .3s;
   font-size: 1rem;
-  font-weight: 600
+  font-weight: 600;
 }
 
 .button-blog:hover {

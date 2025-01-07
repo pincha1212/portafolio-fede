@@ -1,7 +1,7 @@
 .cta-button,
 .home-title {
     font-family: Poppins, sans-serif;
-    display: inline-block
+    display: inline-block;
 }
 
 .sobremi {
@@ -11,7 +11,7 @@
     background: linear-gradient(135deg, #f3e6ff, #e3f6ff);
     border-radius: .625rem;
     box-shadow: 0 .125rem .5rem rgba(0, 0, 0, .1);
-    animation: 1s ease-in-out fadeIn
+    animation: 1s ease-in-out fadeIn;
 }
 
 @keyframes fadeIn {

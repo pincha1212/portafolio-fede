@@ -1,0 +1,81 @@
+.blog-container{
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f3e6ff, #e3f6ff);
+    border-radius: .625rem;
+    box-shadow: 0 .125rem .5rem rgba(0, 0, 0, .1);
+    animation: 1s ease-in-out fadeIn;
+    font-family: Poppins, sans-serif;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.blog-title{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    color: #5a189a;
+    margin-bottom: 15px;
+}
+
+.blog-content{
+    font-size: 18px;
+    line-height: 1.8; 
+    color: #2c3e50; 
+    font-family: 'Georgia', serif; 
+    margin: 15px 0;
+    text-align: justify; 
+    background-color: #f7f9fa;
+    padding: 20px; 
+    border-left: 4px solid #34495e;
+    border-radius: 5px; 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.button-container{
+    margin-top: 20px;
+    font-family: Poppins, sans-serif;
+    display: inline-block;
+}
+
+.button-blog{
+    border: none;
+    background-color: #5a189a;
+    color: #fff;
+    padding: .625rem 1.25rem;
+    border-radius: .3125rem;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color .3s, transform .3s;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.button-blog:hover{
+    cursor: pointer;
+    background-color: #3c096c;
+    transform: scale(1.05);
+    box-shadow: 0 .25rem .375rem rgba(0, 0, 0, .1)
+}
+
+
+.blog-error{
+    font-size: 18px; /* Tamaño de fuente moderado */
+    line-height: 1.6; /* Altura de línea para facilitar la lectura */
+    color: #e74c3c; /* Rojo sobrio para resaltar el error */
+    font-family: 'Arial', sans-serif; /* Tipografía clara y profesional */
+    background-color: #fbeaea; /* Fondo suave en tono rojo claro */
+    padding: 15px 20px; /* Espaciado interno */
+    margin: 20px 0; /* Espaciado con otros elementos */
+    text-align: center; /* Centra el texto */
+    border: 2px solid #e74c3c; /* Borde rojo que refuerza el mensaje */
+    border-radius: 5px; /* Bordes redondeados para suavizar el diseño */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil para destacar */
+}
