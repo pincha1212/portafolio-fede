@@ -101,56 +101,55 @@ export class BlogService {
 
       content: [
         {
-          texts: ['Cuando hablamos de mejorar la accesibilidad en proyectos web, lo primero que se me viene a la mente es que no es solo una obligación legal en algunos países, sino también una forma de hacer que nuestros proyectos lleguen a un público mucho más amplio.',
-            'La accesibilidad no solo mejora la experiencia de los usuarios con discapacidades, sino que, de hecho, beneficia a todos, ya que hace que el sitio sea más fácil de usar y más eficiente.'
+          texts: ['Cuando se habla de mejorar la accesibilidad en los proyectos web, para mí es clave no verlo como una obligación, sino como una oportunidad de hacer que el sitio llegue a más gente. No solo estamos ayudando a las personas con discapacidades, sino que en el fondo, mejoramos la experiencia para todos. Cosas simples como un buen contraste de colores o un diseño más claro terminan beneficiando a un montón de usuarios.'
           ],
         },
         
         {
           title:'HTML Semántico',
-          texts:['A la hora de crear un sitio accesible, el HTML semántico es clave. Las etiquetas como <header>, <nav>, <section>, <footer>, entre otras, no solo sirven para darle estructura al sitio, sino que ayudan a los lectores de pantalla a entender de qué se trata cada parte del contenido. Si evitamos abusar de <div> y <span> para todo, y usamos etiquetas semánticas, estamos dando un paso gigante en accesibilidad.'
+          texts:['Primero, lo que trato de hacer siempre es usar un HTML semántico. Es decir, trato de no abusar de <div> o <span> para todo, sino que uso etiquetas que realmente describen el contenido, como <header>, <footer>, <section>, etc. Esto hace que el sitio esté más ordenado y que herramientas como los lectores de pantalla lo entiendan mejor.'
           ],
         },
 
         {
           title:'Contraste de Color y Visibilidad',
-          texts: ['Otro punto esencial es el contraste de color. No es solo un tema estético, sino funcional. Si el contraste no es el adecuado, se complica la lectura, especialmente para personas con dificultades visuales o en condiciones de baja luz. Para asegurarme de que todo esté bien, siempre uso herramientas como el WCAG Contrast Checker para asegurarme de que los colores que elijo cumplen con los estándares de accesibilidad.'
+          texts: ['Luego, el contraste de los colores. Si no hay buen contraste entre el texto y el fondo, puede ser un dolor de cabeza leer, especialmente para alguien con problemas de visión. Por eso, siempre chequeo el contraste con herramientas como el WCAG Contrast Checker, para asegurarme de que sea adecuado. A veces un pequeño ajuste de color cambia todo.'
           ]
         },
 
         {
           title:'Teclas de Acceso Rápido (Shortcuts) y Navegación con el Teclado',
-          texts: ['Es clave que el sitio sea totalmente navegable con el teclado. No todos los usuarios pueden usar un ratón, así que debemos asegurarnos de que puedan moverse de manera fluida a través del contenido usando solo el teclado. Para eso, los atajos de teclado y una navegación lógica por tabulación son fundamentales.']
+          texts: ['Un tema clave es la navegación con el teclado. No todos usan el ratón, así que es importante que el sitio sea completamente navegable con las teclas. Además, tener atajos de teclado puede ser muy útil para moverse rápido por el sitio.']
         },
 
         {
           title:'Etiquetas aria y Roles',
-          texts: ['Las etiquetas aria son fundamentales para mejorar la accesibilidad de sitios con contenido dinámico, como menús o modales. Estas etiquetas indican a los lectores de pantalla el tipo de contenido y su estado. Usarlas correctamente puede hacer una gran diferencia, sobre todo cuando los elementos son interactivos o cambian su estado de manera dinámica.']
+          texts: ['Las etiquetas aria son geniales cuando tenemos contenido dinámico, como un menú desplegable o un pop-up. Estas etiquetas permiten que los lectores de pantalla sepan qué está pasando en la página, lo que facilita mucho la navegación para quienes las usan.']
         },
 
         {
           title:'Texto Alternativo y Multimedia',
-          texts: ['El texto alternativo es algo básico pero que muchas veces se pasa por alto. Las imágenes deben tener descripciones claras y concisas en el atributo alt, y los videos deben contar con subtítulos o transcripciones. Esto no solo es útil para personas con discapacidades visuales, sino también para quienes tienen dificultades auditivas o no hablan el idioma principal del sitio.']
+          texts: ['Las imágenes siempre deben tener una descripción en el atributo alt, y si hay videos, lo ideal es agregar subtítulos o transcripciones. Esto no es solo para personas con discapacidades visuales o auditivas, sino también para quienes no entienden el idioma del sitio o prefieren leer antes que escuchar.']
         },
         {
           title:'Lenguaje Claro y Conciso',
-          texts: ['Usar un lenguaje simple y directo es otra manera de mejorar la accesibilidad. El lenguaje claro ayuda a personas con discapacidades cognitivas, pero también es útil para aquellos que no hablan el idioma principal del sitio. Evitar jerga o términos demasiado complejos es fundamental.']
+          texts: ['Tratar de usar un lenguaje simple es clave. A veces nos gusta complicar las cosas con jerga o palabras rebuscadas, pero lo mejor es ser claro y directo. Esto ayuda a todo el mundo, pero sobre todo a personas con discapacidades cognitivas o quienes no dominan el idioma del sitio.']
         },
         {
           title:'Formularios Accesibles',
-          texts: ['Los formularios deben ser diseñados de manera accesible, y no solo en términos de usabilidad, sino también de comprensión. Las etiquetas deben estar bien asociadas a los campos de entrada, y los mensajes de error deben ser claros y fáciles de entender. Para los usuarios que usan lectores de pantalla, todo debe estar bien marcado con los atributos correspondientes.']
+          texts: ['Los formularios son otro tema importante. No basta con hacer que funcionen; deben estar bien estructurados, con etiquetas claras asociadas a los campos y mensajes de error fáciles de entender. Además, para quienes usan lectores de pantalla, todo debe estar bien marcado para que sea lógico y fácil de seguir.']
         },
         {
           title:'Animaciones y Efectos',
-          texts: ['Las animaciones pueden ser geniales, pero también pueden causar problemas. Algunas personas tienen sensibilidad al movimiento o pueden sufrir de epilepsia fotosensible. Es importante asegurarnos de que las animaciones no sean invasivas y, si es posible, darles la opción a los usuarios de desactivarlas.']
+          texts: ['Las animaciones están buenas, pero hay que tener cuidado con ellas. Algunas personas tienen sensibilidad al movimiento o pueden ser propensas a ataques de epilepsia fotosensible. Por eso, trato de que las animaciones sean suaves o, si es posible, permitir que el usuario las apague si no le gustan.']
         },
         {
           title:'Testeo y Feedback Continuo',
-          texts: ['La accesibilidad no es algo que se hace una vez y se olvida. Siempre que actualizamos un proyecto, debemos asegurarnos de que seguimos cumpliendo con los estándares de accesibilidad. No hay mejor manera de saber si estamos haciendo bien las cosas que probando con usuarios reales, sobre todo con aquellos que tienen discapacidades.']
+          texts: ['Lo más importante: siempre probar todo. A veces uno cree que todo está perfecto, pero la mejor forma de saber si realmente es accesible es pidiéndole feedback a los usuarios reales, especialmente aquellos que dependen de tecnologías de asistencia. Además, la accesibilidad no es algo que se hace una sola vez; siempre es bueno revisar y mejorar con el tiempo.']
         },
         {
           title:'Conclusión',
-          texts: ['En resumen, mejorar la accesibilidad no es solo un conjunto de tareas que completar, sino un compromiso con todos los usuarios. Un sitio accesible no solo se hace más fácil de usar para las personas con discapacidades, sino que, al final, crea una experiencia web más inclusiva, eficiente y agradable para todos. Implementar buenas prácticas de accesibilidad no es complicado, pero requiere que pensemos siempre en el usuario y en cómo asegurarnos de que todos puedan disfrutar de nuestro trabajo.']
+          texts: ['Mejorar la accesibilidad no solo es cumplir con una norma, sino que es una forma de hacer que el sitio sea más útil y fácil de usar para todos. No es tan complicado como parece, y con algunos ajustes simples podemos hacer que la web sea un lugar más inclusivo.']
         },
       ],
     },
