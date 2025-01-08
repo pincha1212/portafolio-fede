@@ -19,7 +19,7 @@ export class ProyectosService {
             'Además, uno de los pilares de este proyecto es la adaptabilidad. El portafolio está diseñado para funcionar perfectamente en dispositivos de todos los tamaños y capacidades, garantizando una experiencia uniforme tanto en computadoras de escritorio como en teléfonos móviles.'
           ],
           image: {
-            src: 'https://i.ibb.co/7Kp45xP/carga-forma-perezoso.webp',
+            src: 'https://i.ibb.co/6B7mqnM/menuprincipal.webp',
             alt: 'Vista general del Portafolio Interactivo',
           }
         },
@@ -32,7 +32,7 @@ export class ProyectosService {
             'Accesibilidad garantizada: Incorporé estándares de diseño accesible, como soporte para navegación por teclado, etiquetas ARIA y buen contraste entre texto y fondo para usuarios con dificultades visuales.'
           ],
           image: {
-            src: 'assets/images/caracteristicas-portafolio.jpg',
+            src: 'https://i.ibb.co/y0RPZx0/hoveryboxsahdow.webp',
             alt: 'Ejemplo de características visuales del portafolio',
           }
         },
@@ -46,7 +46,7 @@ export class ProyectosService {
             'El diseño responsivo se trabajó en base a media queries, adaptando no solo el layout, sino también el tamaño de las fuentes, márgenes y botones para una experiencia uniforme en cualquier dispositivo.'
           ],
           image: {
-            src: 'assets/images/detalles-tecnicos-portafolio.jpg',
+            src: 'https://i.ibb.co/hYBrKKv/lazyloaded.webp',
             alt: 'Vista del código optimizado del proyecto',
           }
         },
@@ -59,16 +59,11 @@ export class ProyectosService {
             'Se añadieron accesos rápidos en la página de inicio para destacar los proyectos más relevantes y el formulario de contacto, mejorando la accesibilidad a información clave.'
           ],
           image: {
-            src: 'assets/images/experiencia-usuario-portafolio.jpg',
+            src: 'https://i.ibb.co/v1hHNwy/menu-responsivo.webp',
             alt: 'Interacción del usuario con el portafolio',
           }
         },
-        {
-          title: 'Galería',
-        },
-        {
-          image: { src:'https://i.ibb.co/7Kp45xP/carga-forma-perezoso.webp', alt:'prubea'}
-        },
+
         {
           title: 'Conclusión',
           texts: [
@@ -76,11 +71,11 @@ export class ProyectosService {
             'Es un proyecto en constante evolución, y cada actualización busca incorporar lo último en tendencias y tecnología, asegurando que siempre se mantenga relevante y funcional.',
             'Espero que, al explorar este portafolio, no solo encuentres información sobre mis proyectos, sino también una muestra de mi pasión por el desarrollo web y el diseño.'
           ],
-          image: {
-            src: 'assets/images/conclusion-portafolio.jpg',
-            alt: 'Resumen final del Portafolio Interactivo',
-          }
-        }
+        },
+        {
+          title: 'Galería',
+        },
+
       ],
     },
     

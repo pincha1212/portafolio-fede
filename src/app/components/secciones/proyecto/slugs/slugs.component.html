@@ -15,21 +15,27 @@
         <p *ngFor="let text of section.texts" class="section-text">{{ text }}</p>
       </ng-container>
 
-      <!-- Imagen dentro de la sección -->
-      <div *ngIf="section.image?.src" class="image-container">
-        <img [src]="section.image.src" [alt]="section.image.alt || 'Imagen sin descripción'" class="section-image" />
+      <div *ngIf="section.image?.src" class="single-image-container">
+        <img [src]="section.image.src" [alt]="section.image.alt || 'Imagen sin descripción'" class="single-section-image" />
       </div>
+
     </ng-container>
+
+    <div class="image-container">
+      <img src="https://i.ibb.co/FD5kLcK/galeria1.webp" alt="Imagen 1" class="section-image" />
+      <img src="https://i.ibb.co/nPrKYJy/galeria2.webp" alt="Imagen 2" class="section-image" />
+      <img src="https://i.ibb.co/hWtM3F2/galeria3.webp" alt="Imagen 3" class="section-image" />
+    </div>
+    
   </div>
+
+  
 
   <!-- Botón para regresar -->
   <div class="button-container">
-    <button 
-        [routerLink]="'/proyectos'" 
-        routerLinkActive="active" 
-        class="button-blog"
-        aria-label="Volver al listado de proyectos">
-        Volver
+    <button [routerLink]="'/proyectos'" routerLinkActive="active" class="button-blog"
+      aria-label="Volver al listado de proyectos">
+      Volver
     </button>
   </div>
 
