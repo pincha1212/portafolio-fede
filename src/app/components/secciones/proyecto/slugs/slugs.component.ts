@@ -16,6 +16,8 @@ export class SlugsComponent implements OnInit {
   post: any = null;
   proyecto: any = null;
 
+  
+
   constructor(
     private route: ActivatedRoute,
     private proyectosService: ProyectosService
