@@ -1,25 +1,31 @@
 <div class="blog-container">
 
-    <div *ngIf="post">
-        <h1 class="blog-title">{{ post.title }}</h1>
-        <div class="blog-content">
-          <!-- Caso: post.content es un array -->
-          <ng-container *ngIf="isArray(post.content); else stringContent">
-            <ng-container *ngFor="let element of post.content">
-              <p *ngIf="element.type === 'text'">{{ element.text }}</p>
-              <img *ngIf="element.type === 'image' && element.src" 
-                   [src]="element.src" 
-                   [alt]="element.alt || 'Imagen sin descripción'" 
-                   class="blog-image" />
-            </ng-container>
-          </ng-container>
-      
-          <!-- Caso: post.content es un string -->
-          <ng-template #stringContent>
-            <p>{{ post.content }}</p>
-          </ng-template>
+
+    <h1 class="blog-title">{{ post.title }}</h1>
+    
+    <div class="blog-content">
+      <ng-container *ngFor="let section of post.content">
+        
+        <!-- Título de la sección -->
+        <h2 *ngIf="section.title" class="section-title">{{ section.title }}</h2>
+  
+        <!-- Subtítulo de la sección -->
+        <h3 *ngIf="section.subtitle" class="section-subtitle">{{ section.subtitle }}</h3>
+  
+        <!-- Textos dentro de la sección -->
+        <ng-container *ngIf="section.texts">
+          <p *ngFor="let text of section.texts" class="section-text">{{ text }}</p>
+        </ng-container>
+  
+        <!-- Imagen dentro de la sección -->
+        <div *ngIf="section.image?.src" class="image-container">
+          <img [src]="section.image.src" [alt]="section.image.alt || 'Imagen sin descripción'" class="section-image" />
         </div>
-      </div>
+      </ng-container>
+
+  </div>
+  
+  
       
     <div *ngIf="!post" class="blog-error">
         <p>Publicación no encontrada.</p>

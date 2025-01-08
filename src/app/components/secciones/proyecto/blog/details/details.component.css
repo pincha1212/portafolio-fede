@@ -1,4 +1,4 @@
-.blog-container{
+.blog-container {
     max-width: 80%;
     margin: 0 auto;
     padding: 2rem;
@@ -6,26 +6,28 @@
     border-radius: .625rem;
     box-shadow: 0 .125rem .5rem rgba(0, 0, 0, .1);
     animation: 1s ease-in-out fadeIn;
-    font-family: Poppins, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 @keyframes fadeIn {
     from {
-        opacity: 0
+        opacity: 0;
     }
-
     to {
-        opacity: 1
+        opacity: 1;
     }
 }
 
-.blog-title{
+.blog-title {
     font-family: 'Poppins', sans-serif;
     font-size: 1.8rem;
     color: #5a189a;
-    margin-bottom: 15px;
+    text-align: center;
+    margin-bottom: 15px; 
+    font-weight: bold;
+    word-wrap: break-word;
 }
 
-.blog-content{
+.blog-content {
     font-size: 18px;
     line-height: 1.8; 
     color: #2c3e50; 
@@ -36,16 +38,56 @@
     padding: 20px; 
     border-left: 4px solid #34495e;
     border-radius: 5px; 
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);     
 }
 
-.button-container{
+.section-title {
+    font-size: 1.5rem;
+    color: #444;
     margin-top: 20px;
-    font-family: Poppins, sans-serif;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 10px;
+    text-align: left;
+    font-weight: normal;
+}
+
+.section-text {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.image-container {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.section-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.section-image:hover {
+    transform: scale(1.1); /* Amplía un 10% */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button-container {
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
     display: inline-block;
 }
 
-.button-blog{
+.button-blog {
     border: none;
     background-color: #5a189a;
     color: #fff;
@@ -58,24 +100,94 @@
     font-weight: 600;
 }
 
-.button-blog:hover{
+.button-blog:hover {
     cursor: pointer;
     background-color: #3c096c;
     transform: scale(1.05);
-    box-shadow: 0 .25rem .375rem rgba(0, 0, 0, .1)
+    box-shadow: 0 .25rem .375rem rgba(0, 0, 0, .1);
 }
 
+.blog-error {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #e74c3c;
+    background-color: #fbeaea;
+    padding: 15px 20px;
+    margin: 20px 0;
+    text-align: center;
+    border: 2px solid #e74c3c;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-.blog-error{
-    font-size: 18px; /* Tamaño de fuente moderado */
-    line-height: 1.6; /* Altura de línea para facilitar la lectura */
-    color: #e74c3c; /* Rojo sobrio para resaltar el error */
-    font-family: 'Arial', sans-serif; /* Tipografía clara y profesional */
-    background-color: #fbeaea; /* Fondo suave en tono rojo claro */
-    padding: 15px 20px; /* Espaciado interno */
-    margin: 20px 0; /* Espaciado con otros elementos */
-    text-align: center; /* Centra el texto */
-    border: 2px solid #e74c3c; /* Borde rojo que refuerza el mensaje */
-    border-radius: 5px; /* Bordes redondeados para suavizar el diseño */
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil para destacar */
+@media (max-width: 768px) {
+    .blog-title {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+    }
+
+    .section-title {
+        font-size: 1.4rem;
+        margin-top: 15px;
+    }
+
+    .section-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .section-text {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .section-image {
+        margin-top: 10px;
+    }
+    .section-image:hover {
+        transform: scale(1.2); 
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+}
+
+@media (min-width: 1024px) {
+    .blog-container {
+        max-width: 70%;
+        padding: 3rem;
+        box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .15);
+    }
+
+    .blog-title {
+        font-size: 2rem;
+    }
+
+    .blog-content {
+        font-size: 20px;
+        line-height: 2;
+        padding: 30px;
+    }
+
+    .section-title {
+        font-size: 1.7rem;
+        margin-top: 30px;
+    }
+
+    .section-subtitle {
+        font-size: 1.4rem;
+    }
+
+    .section-text {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+
+    .section-image {
+        max-width: 80%;
+        margin: 20px auto;
+        border-radius: 10px;
+    }
+
+    .button-blog {
+        font-size: 1.1rem;
+        padding: .75rem 1.5rem;
+    }
 }

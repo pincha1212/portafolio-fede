@@ -24,19 +24,16 @@ export class BlogComponent {
     this.router.navigate([`/blog/${id}`]);
   }
 
-  getSnippet(content: any): string {
-    if (Array.isArray(content)) {
-      // Caso: content es un array de objetos
-      const textContent = content
-        .filter(item => item.type === 'text')
-        .map(item => item.text)
-        .join(' ');
-      return textContent.length > 100 ? textContent.slice(0, 100) + '...' : textContent;
-    } else if (typeof content === 'string') {
-      // Caso: content es un string simple
-      return content.length > 100 ? content.slice(0, 100) + '...' : content;
+  getSnippet(content: any[]): string {
+    // Buscar el primer texto en el contenido
+    for (let section of content) {
+      if (section.texts && section.texts.length > 0) {
+        return section.texts[0].slice(0, 100) + '...'; // Retorna el primer texto con un límite de 100 caracteres
+      }
     }
-    return ''; // Si no hay contenido válido
+    // Si no encuentra ningún texto, retornar un mensaje predeterminado
+    return 'Contenido no disponible';
   }
+  
   
 }
