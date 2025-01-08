@@ -13,7 +13,8 @@ import { ProyectosService } from '../../../../services/proyectos.service';
 })
 
 export class SlugsComponent implements OnInit {
-  proyecto: any;
+  image: any = null;
+  proyecto: any = null;
 
   constructor(
     private route: ActivatedRoute,
@@ -23,5 +24,9 @@ export class SlugsComponent implements OnInit {
   ngOnInit(): void {
     const slug = this.route.snapshot.paramMap.get('id') || '';
     this.proyecto = this.proyectosService.getProyectoBySlug(slug);
+    console.log(this.proyecto);
   }
+
+  
+  
 }
