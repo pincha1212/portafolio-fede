@@ -16,7 +16,7 @@ export class ProyectosService {
           texts: [
             'Este proyecto es una evolución integral de mi primer portafolio. No se trata solo de un rediseño, sino de un replanteo completo en cuanto a rendimiento, accesibilidad y estética. Mi intención principal fue crear una plataforma donde cada usuario pueda navegar de forma cómoda, fluida y sin barreras.',
             'Diseñé la interfaz pensando en la simplicidad, pero sin perder ese toque interactivo que hace que el usuario quiera explorar más. Desde la elección de colores hasta la implementación de animaciones, cada decisión está alineada con mejorar la experiencia general.',
-            'Además, uno de los pilares de este proyecto es la adaptabilidad. El portafolio está diseñado para funcionar perfectamente en dispositivos de todos los tamaños y capacidades, garantizando una experiencia uniforme tanto en computadoras de escritorio como en teléfonos móviles.'
+            'Además, uno de los pilares de este proyecto es la adaptabilidad. El portafolio está diseñado para funcionar perfectamente en dispositivos de todos los tamaños y capacidades, garantizando una experiencia uniforme tanto en computadoras de escritorio como en teléfonos móviles.',
           ],
           image: {
             src: 'https://i.ibb.co/6B7mqnM/menuprincipal.webp',
@@ -72,10 +72,6 @@ export class ProyectosService {
             'Espero que, al explorar este portafolio, no solo encuentres información sobre mis proyectos, sino también una muestra de mi pasión por el desarrollo web y el diseño.'
           ],
         },
-        {
-          title: 'Galería',
-        },
-
       ],
     },
     
@@ -84,9 +80,15 @@ export class ProyectosService {
       slug: 'hola-mundo',
       titulo: 'Hola Mundo',
       fecha: '2024',
-      descripcion: 
-'Creé el proyecto Hola Mundo no solo por los estilos y demás, sino porque tenía problemas para subir las páginas a GitHub Pages, algo que venía intentando hace como 2 años. Con prueba y error, logré encontar la solucion, porque Angular no está configurado de manera especial para GitHub Pages. Tuve que instalar algunos archivos globalmente para poder conectar mi GitHub con el proyecto, algo que aprendí por mí mismo. En los cursos que tomé nunca me lo enseñaron, solo lo básico. Así que tuve que ponerme las pilas y entender cómo funciona todo eso para finalmente implementarlo correctamente. Después de resolver ese tema, pude empezar a jugar con otras características como las rutas, la optimización y la responsividad, que son cosas que realmente me gustan. Es increíble lo que podés lograr cuando te metés a fondo en algo, y aunque me costó un poco, al final todo valió la pena. Ahora, los proyectos no solo los puedo subir, sino que están bien estructurados y ¿yo?, listo para cualquier cosa.'
-      ,
+      descripcion: [
+        {
+          
+        },
+
+        {
+
+        },
+      ],
     },
   ];
 
