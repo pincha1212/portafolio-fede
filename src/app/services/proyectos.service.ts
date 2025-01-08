@@ -9,7 +9,7 @@ export class ProyectosService {
       id: 'portafolio-interactivo',
       slug: 'portafolio-interactivo',
       titulo: 'Portafolio Interactivo',
-      fecha: '2024',
+      fecha: 'Miércoles, 8 de enero de 2025',
       descripcion: [
         {
           title: 'Introducción',

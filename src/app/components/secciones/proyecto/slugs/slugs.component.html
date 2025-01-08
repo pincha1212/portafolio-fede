@@ -19,13 +19,15 @@
         <img [src]="section.image.src" [alt]="section.image.alt || 'Imagen sin descripción'" class="single-section-image" />
       </div>
 
+            <!-- Galería solo si la sección es "Galería" -->
+            <div *ngIf="section.title === 'Galería'" class="image-container">
+              <img src="https://i.ibb.co/FD5kLcK/galeria1.webp" alt="Imagen 1" class="section-image" />
+              <img src="https://i.ibb.co/nPrKYJy/galeria2.webp" alt="Imagen 2" class="section-image" />
+              <img src="https://i.ibb.co/hWtM3F2/galeria3.webp" alt="Imagen 3" class="section-image" />
+            </div>
     </ng-container>
 
-    <div class="image-container">
-      <img src="https://i.ibb.co/FD5kLcK/galeria1.webp" alt="Imagen 1" class="section-image" />
-      <img src="https://i.ibb.co/nPrKYJy/galeria2.webp" alt="Imagen 2" class="section-image" />
-      <img src="https://i.ibb.co/hWtM3F2/galeria3.webp" alt="Imagen 3" class="section-image" />
-    </div>
+
     
   </div>
 
@@ -33,11 +35,12 @@
 
   <!-- Botón para regresar -->
   <div class="button-container">
-    <button [routerLink]="'/proyectos'" routerLinkActive="active" class="button-blog"
+    <button [routerLink]="'/proyecto'" routerLinkActive="active" class="button-blog"
       aria-label="Volver al listado de proyectos">
       Volver
     </button>
   </div>
+
 
   <!-- Mensaje de error si no se encuentra el proyecto -->
   <div *ngIf="!proyecto" class="blog-error">
