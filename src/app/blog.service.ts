@@ -97,29 +97,24 @@ export class BlogService {
     
     {
       id: 'mejorando-accesibilidad-proyectos-web',
-      title: 'Mejorando la accesibilidad en tus proyectos web',
+      title: 'Mejorando la accesibilidad en mis proyectos web',
 
       content: [
         {
-          texts: ['Cuando se habla de mejorar la accesibilidad en los proyectos web, para mí es clave no verlo como una obligación, sino como una oportunidad de hacer que el sitio llegue a más gente. No solo estamos ayudando a las personas con discapacidades, sino que en el fondo, mejoramos la experiencia para todos. Cosas simples como un buen contraste de colores o un diseño más claro terminan beneficiando a un montón de usuarios.'
+          texts: ['Cuando empecé a diseñar mi portafolio web, me di cuenta de que la accesibilidad era algo que no podía pasar por alto. A veces, en el camino del diseño web, nos enfocamos tanto en lo estético que olvidamos cómo un sitio puede ser más accesible para todos. Sin embargo, aprendí que mejorar la accesibilidad no solo ayuda a las personas con discapacidades, sino que hace que el sitio sea más funcional y fácil de usar para todos.'
           ],
         },
         
         {
-          title:'HTML Semántico',
-          texts:['Primero, lo que trato de hacer siempre es usar un HTML semántico. Es decir, trato de no abusar de <div> o <span> para todo, sino que uso etiquetas que realmente describen el contenido, como <header>, <footer>, <section>, etc. Esto hace que el sitio esté más ordenado y que herramientas como los lectores de pantalla lo entiendan mejor.'
+          title:' La base de un buen proyecto',
+          texts:['Desde el principio, traté de mantener mi HTML limpio y semántico. En lugar de usar <div>o <span>por todo el código, comience a usar etiquetas más descriptivas como <header>, <footer>, <section>, entre otras. Esto no solo hace que el código sea más fácil de mantener, sino que también facilita la tarea a los lectores de pantalla, que son fundamentales para los usuarios con discapacidad visual. Además, al usar un HTML estructurado correctamente, mi portafolio se volvió más accesible y organizado.'
           ],
         },
 
         {
-          title:'Contraste de Color y Visibilidad',
-          texts: ['Luego, el contraste de los colores. Si no hay buen contraste entre el texto y el fondo, puede ser un dolor de cabeza leer, especialmente para alguien con problemas de visión. Por eso, siempre chequeo el contraste con herramientas como el WCAG Contrast Checker, para asegurarme de que sea adecuado. A veces un pequeño ajuste de color cambia todo.'
+          title:'Los Contraste de Colores y Visibilidad',
+          texts: ['Uno de los aspectos que más me costó al principio fue asegurarme de que el contraste entre los textos y los fondos fuera adecuado. Cuando comencé a revisar el contraste de los colores en mi diseño, me di cuenta de que algunos elementos no eran lo suficientemente legibles para usuarios con problemas de visión. Usé herramientas como el WCAG Contrast Checker para verificar que el contraste cumpliera con los estándares y ajustar los colores sin perder la estética que buscaba. A veces, un pequeño ajuste de color puede hacer que el contenido sea mucho más accesible para todos.'
           ]
-        },
-
-        {
-          title:'Teclas de Acceso Rápido (Shortcuts) y Navegación con el Teclado',
-          texts: ['Un tema clave es la navegación con el teclado. No todos usan el ratón, así que es importante que el sitio sea completamente navegable con las teclas. Además, tener atajos de teclado puede ser muy útil para moverse rápido por el sitio.']
         },
 
         {
