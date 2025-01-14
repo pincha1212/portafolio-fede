@@ -178,21 +178,44 @@
 
 /* Optimización para dispositivos móviles */
 @media (max-width: 768px) {
+    /* Desactivar animaciones y transiciones globales */
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    /* Ajustes específicos para el contenedor de contacto */
     .contact-container {
         padding: 20px;
+        animation: none; /* Desactiva la animación de entrada */
     }
+
+    /* Ajustes para el título */
     .contact-title {
         font-size: 2rem;
+        transition: none; /* Desactiva la transición del hover */
     }
+
+    /* Ajustes para el subtítulo */
     .contact-subtitle {
         font-size: 1.3rem;
+        animation: none; /* Desactiva la animación del gradiente */
+        transition: none; /* Desactiva la transición del hover */
     }
+
+    /* Ajustes para los enlaces sociales */
     .social-links li {
         font-size: 1rem;
+        animation: none; /* Desactiva la animación de entrada */
+        transition: none; /* Desactiva la transición del hover */
     }
+
+    /* Ajustes para el correo electrónico */
     .contact-email p {
         font-size: 1rem;
     }
+
+    /* Ajustes para el pie de página */
     .contact-footer {
         font-size: 1.25rem;
     }

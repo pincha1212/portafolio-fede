@@ -40,3 +40,14 @@
       background-position: 100% 50%;
     }
   }
+  /* Desactivar animación en dispositivos móviles */
+@media (max-width: 768px) {
+  * {
+    animation: none !important;
+    transition: none !important
+}
+  .descripcion {
+      animation: none;
+      color: #5a189a;
+  }
+}

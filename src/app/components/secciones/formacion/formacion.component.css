@@ -139,18 +139,35 @@ li:hover {
     }
 }
 
-/* Optimización para dispositivos móviles */
 @media (max-width: 768px) {
+    /* Desactivar animaciones en el contenedor principal */
     .learning-path {
-        padding: 20px;
+        animation: none;
     }
+
+    /* Desactivar animaciones en el título de la sección */
     .section-title {
-        font-size: 2rem;
+        transition: none;
     }
-    .subsection-title {
-        font-size: 1.5rem;
-    }
+
+    /* Desactivar animaciones en la descripción de la sección */
     .section-description {
-        font-size: 0.9rem;
+        animation: none;
+        transition: none;
+    }
+
+    /* Desactivar animaciones en los títulos de las subsecciones */
+    .subsection-title::after {
+        animation: none;
+    }
+
+    /* Desactivar animaciones en las listas */
+    ul {
+        animation: none;
+    }
+
+    li {
+        animation: none;
+        transition: none;
     }
 }

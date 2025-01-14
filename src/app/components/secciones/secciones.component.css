@@ -1,1 +1,71 @@
-.nav-item.active,.nav-item:hover{color:#fff;transform:translateY(-3px);text-shadow:0 2px 6px rgba(0,0,0,.15)}.navbar{list-style:none;padding:0;margin:0;display:flex;justify-content:center;background:linear-gradient(135deg,#f3e6ff,#e3f6ff);border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.1);animation:1s ease-in-out slideUp}.navbar li{margin:0 15px}.nav-item{text-decoration:none;color:#5a189a;font-family:Poppins,sans-serif;font-size:1.1rem;padding:12px 20px;display:block;border-radius:5px;transition:.3s}.nav-item:hover{background-color:#5a189a}.nav-item.active{background-color:#3c096c}@keyframes slideUp{from{transform:translateY(20px);opacity:0}to{transform:translateY(0);opacity:1}}@media (max-width:768px){.navbar{flex-direction:column;align-items:center;padding:15px}.navbar li{margin-bottom:8px}.nav-item{font-size:1rem;padding:10px 15px}}
+.nav-item.active,
+.nav-item:hover {
+    color: #fff;
+    transform: translateY(-3px);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, .15)
+}
+
+.navbar {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(135deg, #f3e6ff, #e3f6ff);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+    animation: 1s ease-in-out slideUp
+}
+
+.navbar li {
+    margin: 0 15px
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #5a189a;
+    font-family: Poppins, sans-serif;
+    font-size: 1.1rem;
+    padding: 12px 20px;
+    display: block;
+    border-radius: 5px;
+    transition: .3s
+}
+
+.nav-item:hover {
+    background-color: #5a189a
+}
+
+.nav-item.active {
+    background-color: #3c096c
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+@media (max-width:768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        animation: none;
+    }
+
+    .navbar li {
+        margin-bottom: 8px
+    }
+
+    .nav-item {
+        font-size: 1rem;
+        padding: 10px 15px
+    }
+}

@@ -152,27 +152,55 @@
 
 /* Responsividad para pantallas pequeñas */
 @media (max-width: 768px) {
+    /* Desactivar animaciones y transiciones globales */
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    /* Ajustes específicos para la sección de experiencia */
     #experience {
         padding: 20px;
+        animation: none; /* Desactiva la animación de entrada */
     }
 
+    /* Ajustes para el título de la sección */
     .section-title {
         font-size: 2rem;
+        transition: none; /* Desactiva la transición del hover */
     }
 
+    /* Ajustes para la descripción de la sección */
     .section-description {
         font-size: 1rem;
+        animation: none; /* Desactiva la animación del gradiente */
+        transition: none; /* Desactiva la transición del hover */
     }
 
+    /* Ajustes para los títulos de las subsecciones */
     .subsection-title {
         font-size: 1.5rem;
+        transition: none; /* Desactiva la transición del hover */
     }
 
+    /* Ajustes para los títulos de las experiencias */
     .experience-title {
         font-size: 1.1rem;
+        transition: none; /* Desactiva la transición del hover */
     }
 
+    /* Ajustes para la duración de las experiencias */
     .experience-duration {
         font-size: 0.9rem;
+    }
+
+    /* Ajustes para los elementos de experiencia */
+    .experience-item {
+        transition: none; /* Desactiva la transición del hover */
+    }
+
+    /* Ajustes para los elementos de la lista dentro de cada experiencia */
+    .experience-item ul li {
+        transition: none; /* Desactiva la transición del hover */
     }
 }

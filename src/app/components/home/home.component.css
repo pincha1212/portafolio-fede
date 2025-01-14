@@ -124,31 +124,7 @@
 
     .home-subtitle {
         background: 0 0;
-        color: #5a189a
-    }
-
-    .cta-button {
-        transform: none;
-        box-shadow: none
-    }
-}
-
-@media screen and (max-width:480px) {
-    * {
-        animation: none !important;
-        transition: none !important
-    }
-
-    .home-title {
-        font-size: 1.2rem;
-        border: none;
-        width: 100%;
-        white-space: normal
-    }
-
-    .home-subtitle {
-        background: 0 0;
-        color: #5a189a
+        color: #5a189a;
     }
 
     .cta-button {

@@ -75,21 +75,8 @@ export class ProyectosService {
       ],
     },
     
-    {
-      id: '2',
-      slug: 'hola-mundo',
-      titulo: 'Hola Mundo',
-      fecha: '2024',
-      descripcion: [
-        {
-          
-        },
 
-        {
-
-        },
-      ],
-    },
+    
   ];
 
   getProyectos() {

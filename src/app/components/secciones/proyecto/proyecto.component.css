@@ -102,20 +102,20 @@
 }
 
 
-
-
-  
-  /* Optimización para dispositivos móviles */
-  @media (max-width: 768px) {
-    .proyecto-intro {
+/* Optimización para dispositivos móviles */
+@media (max-width: 768px) {
+  .proyecto-intro {
       padding: 20px;
-    }
-
-    
-    .proyecto-titulo {
-      font-size: 1.5rem;
-    }
-
-
+      animation: none; /* Desactiva la animación */
   }
+
+  .subtitulo {
+      animation: none; /* Desactiva la animación */
+      color:#5a189a
+  }
+
+  .proyecto-titulo {
+      font-size: 1.5rem;
+  }
+}
   

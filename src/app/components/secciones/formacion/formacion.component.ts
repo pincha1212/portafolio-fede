@@ -12,7 +12,7 @@ import { Component } from '@angular/core';
 export class FormacionComponent {
   sections = [
     {
-      title: 'Cursos y Certificaciones Técnicas',
+      title: 'Cursos',
       items: [
         { title: 'Programador web full stack Jr', source: 'Argentina Programa', year: '2020-2021' },
         { title: 'Curso de Diseño y UX/UI', source: 'Udemy', year: '2022' },
@@ -34,7 +34,7 @@ export class FormacionComponent {
     {
       title: 'Educación Formal',
       items: [
-        { title: 'titulo Secundario/Bachiller en Educación Física', source: 'Nuestra Sra. de la consolata: Primaria y Secundaria:', year: '2018' }
+        { title: 'titulo Secundario/Bachiller en Educación Física', source: 'Nuestra Sra. de la consolata: Primaria y Secundaria:', year: '2026 - 2018' }
       ]
     }
   ];

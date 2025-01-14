@@ -1,140 +1,209 @@
 /* Contenedor principal */
 .game-container {
-    width: 300px;
-    margin: 20px auto;
-    padding: 15px;
-    border-radius: 10px;
-    background: linear-gradient(135deg, #f3e6ff, #e3f6ff);    
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  /* Imagen dentro de la tarjeta */
-  .game-container img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 10px;
-  }
-  
-  /* Botón */
-  .open-modal-btn {
-    font-family: 'Poppins', sans-serif;
-    padding: 10px 15px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #5a189a;
-    text-transform: uppercase;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .open-modal-btn:hover {
-    background-color: #3c096c;
-    transform: scale(1.05); /* Efecto de escalado */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
-  }
-  
-  .open-modal-btn:focus {
-    outline: none; /* Elimina el contorno predeterminado */
-    background-color: transparent; /* Fondo transparente cuando está enfocado */
-    color: #5a189a; /* El texto se pone verde */
-  }
-  
-  /* Efecto de clic: subrayado */
-  .open-modal-btn:active::after {
-    content: ""; /* Crea el pseudo-elemento */
-    position: absolute; /* Posiciona respecto al botón */
-    bottom: 0; /* En la parte inferior del botón */
-    left: 0; /* Desde el borde izquierdo */
-    height: 3px; /* Altura del subrayado */
-    width: 100%; /* Cubrirá todo el ancho del botón */
-    background-color: #5a189a;
-    transition: transform 0.3s ease; /* Suaviza la animación */
-    transform: scaleX(1); /* Expande el subrayado horizontalmente */
-  }
-  
-  /* Inicialmente el subrayado está contraído */
-  .open-modal-btn::after {
-    content: ""; /* Crea el pseudo-elemento */
-    position: absolute; /* Posiciona respecto al botón */
-    bottom: 0; /* En la parte inferior del botón */
-    left: 0; /* Desde el borde izquierdo */
-    height: 3px; /* Altura del subrayado */
-    width: 100%; /* Cubrirá todo el ancho del botón */
-    background-color: transparent; /* Sin color inicialmente */
-    transform: scaleX(0); /* Subrayado contraído */
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Animaciones suaves */
-  }
-
-
-
-
-
-
-
-
-
-
-
-  
-  /* Modal */
-  .modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-  }
-
-
-
-  
-  .modal-content {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-    position: relative;
-  }
-  
-  .close-btn {
-    position: absolute;
-    top: -25px;
-    right: -25px;
-    font-size: 18px;
-    cursor: pointer;
-    color: #ff0000;
-  }
-  .close-btn:hover {
-    color: #5a189a;
-  }
-  /* Título del juego */
-  h3 {
-    font-family: 'Poppins', sans-serif;
-    color: #6a0572;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 5px;
+  width: 300px;
+  margin: 20px auto;
+  padding: 15px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #f3e6ff, #e3f6ff);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-  
-  /* Instrucciones */
+
+/* Imagen dentro de la tarjeta */
+.game-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Botón */
+.open-modal-btn {
+  font-family: 'Poppins', sans-serif;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #5a189a;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.open-modal-btn:hover {
+  background-color: #3c096c;
+  transform: scale(1.05);
+  /* Efecto de escalado */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Sombra sutil */
+}
+
+.open-modal-btn:focus {
+  outline: none;
+  /* Elimina el contorno predeterminado */
+  background-color: transparent;
+  /* Fondo transparente cuando está enfocado */
+  color: #5a189a;
+  /* El texto se pone verde */
+}
+
+/* Efecto de clic: subrayado */
+.open-modal-btn:active::after {
+  content: "";
+  /* Crea el pseudo-elemento */
+  position: absolute;
+  /* Posiciona respecto al botón */
+  bottom: 0;
+  /* En la parte inferior del botón */
+  left: 0;
+  /* Desde el borde izquierdo */
+  height: 3px;
+  /* Altura del subrayado */
+  width: 100%;
+  /* Cubrirá todo el ancho del botón */
+  background-color: #5a189a;
+  transition: transform 0.3s ease;
+  /* Suaviza la animación */
+  transform: scaleX(1);
+  /* Expande el subrayado horizontalmente */
+}
+
+/* Inicialmente el subrayado está contraído */
+.open-modal-btn::after {
+  content: "";
+  /* Crea el pseudo-elemento */
+  position: absolute;
+  /* Posiciona respecto al botón */
+  bottom: 0;
+  /* En la parte inferior del botón */
+  left: 0;
+  /* Desde el borde izquierdo */
+  height: 3px;
+  /* Altura del subrayado */
+  width: 100%;
+  /* Cubrirá todo el ancho del botón */
+  background-color: transparent;
+  /* Sin color inicialmente */
+  transform: scaleX(0);
+  /* Subrayado contraído */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  /* Animaciones suaves */
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  font-size: 18px;
+  cursor: pointer;
+  color: #ff0000;
+}
+
+.close-btn:hover {
+  color: #5a189a;
+}
+
+/* Título del juego */
+h3 {
+  font-family: 'Poppins', sans-serif;
+  color: #6a0572;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+}
+
+/* Instrucciones */
 p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    color: #841ee9;
-    margin: 10px 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: #841ee9;
+  margin: 10px 0;
 }
 
 p:hover {
-    color: #6a0572;
+  color: #6a0572;
+}
+
+@media (max-width: 768px) {
+  /* Contenedor principal */
+  .game-container {
+    width: 90%; /* Ajusta el ancho para dispositivos móviles */
+    margin: 10px auto; /* Reduce el margen */
+    padding: 10px; /* Reduce el padding */
+    transition: none; /* Desactiva las transiciones */
+  }
+
+  /* Botón */
+  .open-modal-btn {
+    padding: 8px 12px; /* Reduce el padding */
+    font-size: 14px; /* Reduce el tamaño de la fuente */
+    transition: none; /* Desactiva las transiciones */
+  }
+
+  .open-modal-btn:hover {
+    transform: none; /* Desactiva el efecto de escalado */
+    box-shadow: none; /* Desactiva la sombra */
+  }
+
+  .open-modal-btn:focus {
+    background-color: #5a189a; /* Restaura el color de fondo */
+    color: #fff; /* Restaura el color del texto */
+  }
+
+  .open-modal-btn:active::after {
+    transform: none; /* Desactiva la animación del subrayado */
+  }
+
+  .open-modal-btn::after {
+    transition: none; /* Desactiva la animación del subrayado */
+  }
+
+  /* Modal */
+  .modal-content {
+    padding: 15px; /* Reduce el padding */
+  }
+
+  .close-btn {
+    top: -20px; /* Ajusta la posición */
+    right: -20px; /* Ajusta la posición */
+    font-size: 16px; /* Reduce el tamaño de la fuente */
+  }
+
+  /* Título del juego */
+  h3 {
+    font-size: 1rem; /* Reduce el tamaño de la fuente */
+  }
+
+  /* Instrucciones */
+  p {
+    font-size: 0.9rem; /* Reduce el tamaño de la fuente */
+  }
 }
